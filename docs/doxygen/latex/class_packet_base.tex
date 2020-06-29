@@ -1,0 +1,222 @@
+\hypertarget{class_packet_base}{}\doxysection{Packet\+Base Class Reference}
+\label{class_packet_base}\index{PacketBase@{PacketBase}}
+
+
+\+: Base class of all packets, every new packet type should be derived from this class as the base  
+
+
+
+
+{\ttfamily \#include $<$Packet\+Base.\+hpp$>$}
+
+Inheritance diagram for Packet\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.960549cm]{class_packet_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_packet_base_a300e4932ad70f40e097663d914acdbd9}{Packet\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_packet_base_a2ea63533e42e26303ff9d2b07dc0d87e}{report\+Error\+Line}} (std\+::string\+\_\+view str)
+\begin{DoxyCompactList}\small\item\em Reports an error message to the specified output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_packet_base_a120dcc643dcad379cc46fdd17832db3b}{report\+Message\+Line}} (std\+::string\+\_\+view str)
+\begin{DoxyCompactList}\small\item\em Reports a general message to the specified output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_packet_base_aca6f2f9e5c7bc4537f100614f52eba44}{set\+Output\+Stream}} (std\+::ostream $\ast$stream)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_packet_base_ab4707093ce282ad4ce91609ab587017d}{length}} ()
+\begin{DoxyCompactList}\small\item\em Returns the length of the packet. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_packet_base_ac850e212771641c9a20c15b68806f609}{update\+From\+Memory}} (void $\ast$from\+Address)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_packet_base_a68a191e90d92384ab14fef44c85180f9}{has\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Checks correctness of the Error Check Byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{class_packet_base_aeeb20d3dd0a3d8500f6b8e5764923919}{\+\_\+packet\+Data}}
+\begin{DoxyCompactList}\small\item\em Holds a pointer to the packet data. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_packet_base_a78a78571a8a5429ee160670a4ce76238}{\+\_\+packet\+Length}}
+\begin{DoxyCompactList}\small\item\em Holds the packet length. \end{DoxyCompactList}\item 
+std\+::ostream $\ast$ \mbox{\hyperlink{class_packet_base_ae1cdc5c0aff94ee72937f6582847ee50}{\+\_\+output\+Stream}}
+\begin{DoxyCompactList}\small\item\em Holds a pointer to the desired output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespacecdp_a9d6d788e56ad06bb733e7956d030500e}{cdp\+::\+Endianness}} \mbox{\hyperlink{class_packet_base_a34460b7f4fb90b9424ae17cbee4f255c}{\+\_\+endianness}} = \mbox{\hyperlink{namespacecdp_ac102d5f439f89bb0f7c692f1da47cf48}{cdp\+::get\+Endianness}}()
+\begin{DoxyCompactList}\small\item\em Holds the memory endianness of the target on which the packet exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Base class of all packets, every new packet type should be derived from this class as the base 
+
+Definition at line 19 of file Packet\+Base.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_packet_base_a300e4932ad70f40e097663d914acdbd9}\label{class_packet_base_a300e4932ad70f40e097663d914acdbd9}} 
+\index{PacketBase@{PacketBase}!PacketBase@{PacketBase}}
+\index{PacketBase@{PacketBase}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{PacketBase()}{PacketBase()}}
+{\footnotesize\ttfamily Packet\+Base\+::\+Packet\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+
+Definition at line 22 of file Packet\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_packet_base_a68a191e90d92384ab14fef44c85180f9}\label{class_packet_base_a68a191e90d92384ab14fef44c85180f9}} 
+\index{PacketBase@{PacketBase}!hasError@{hasError}}
+\index{hasError@{hasError}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{hasError()}{hasError()}}
+{\footnotesize\ttfamily bool Packet\+Base\+::has\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks correctness of the Error Check Byte. 
+
+
+
+Definition at line 56 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_ab4707093ce282ad4ce91609ab587017d}\label{class_packet_base_ab4707093ce282ad4ce91609ab587017d}} 
+\index{PacketBase@{PacketBase}!length@{length}}
+\index{length@{length}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t Packet\+Base\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the length of the packet. 
+
+
+
+Definition at line 44 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_a2ea63533e42e26303ff9d2b07dc0d87e}\label{class_packet_base_a2ea63533e42e26303ff9d2b07dc0d87e}} 
+\index{PacketBase@{PacketBase}!reportErrorLine@{reportErrorLine}}
+\index{reportErrorLine@{reportErrorLine}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{reportErrorLine()}{reportErrorLine()}}
+{\footnotesize\ttfamily void Packet\+Base\+::report\+Error\+Line (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reports an error message to the specified output stream. 
+
+
+
+Definition at line 26 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_a120dcc643dcad379cc46fdd17832db3b}\label{class_packet_base_a120dcc643dcad379cc46fdd17832db3b}} 
+\index{PacketBase@{PacketBase}!reportMessageLine@{reportMessageLine}}
+\index{reportMessageLine@{reportMessageLine}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{reportMessageLine()}{reportMessageLine()}}
+{\footnotesize\ttfamily void Packet\+Base\+::report\+Message\+Line (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reports a general message to the specified output stream. 
+
+
+
+Definition at line 32 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_aca6f2f9e5c7bc4537f100614f52eba44}\label{class_packet_base_aca6f2f9e5c7bc4537f100614f52eba44}} 
+\index{PacketBase@{PacketBase}!setOutputStream@{setOutputStream}}
+\index{setOutputStream@{setOutputStream}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{setOutputStream()}{setOutputStream()}}
+{\footnotesize\ttfamily void Packet\+Base\+::set\+Output\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream $\ast$}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the output stream of the class which will be used for the output reporting 
+
+Definition at line 39 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_ac850e212771641c9a20c15b68806f609}\label{class_packet_base_ac850e212771641c9a20c15b68806f609}} 
+\index{PacketBase@{PacketBase}!updateFromMemory@{updateFromMemory}}
+\index{updateFromMemory@{updateFromMemory}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{updateFromMemory()}{updateFromMemory()}}
+{\footnotesize\ttfamily virtual bool Packet\+Base\+::update\+From\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{from\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Updates the internal packet data using from a provided memory region anbd returns the result if succeeded or not 
+
+Reimplemented in \mbox{\hyperlink{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}{Packet\+Template$<$ New\+Packet, I\+D, \+\_\+\+First, \+\_\+\+Rest $>$}}, \mbox{\hyperlink{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}{Packet\+Template$<$ Packet\+Voltage\+Current, 0, uint8\+\_\+t $\ast$, uint32\+\_\+t $\ast$, uint32\+\_\+t $\ast$, uint64\+\_\+t $\ast$, uint8\+\_\+t $\ast$ $>$}}, \mbox{\hyperlink{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}{Packet\+Template$<$ Packet\+Battery, 1, uint8\+\_\+t $\ast$, uint32\+\_\+t $\ast$, uint8\+\_\+t $\ast$, uint8\+\_\+t $\ast$ $>$}}, \mbox{\hyperlink{class_packet_voltage_current_a380321a28efd3810efb67a272709298f}{Packet\+Voltage\+Current}}, and \mbox{\hyperlink{class_packet_battery_a98ecdf1e9c7f7bdf59d28a9410301de5}{Packet\+Battery}}.
+
+
+
+Definition at line 50 of file Packet\+Base.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_packet_base_a34460b7f4fb90b9424ae17cbee4f255c}\label{class_packet_base_a34460b7f4fb90b9424ae17cbee4f255c}} 
+\index{PacketBase@{PacketBase}!\_endianness@{\_endianness}}
+\index{\_endianness@{\_endianness}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{\_endianness}{\_endianness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecdp_a9d6d788e56ad06bb733e7956d030500e}{cdp\+::\+Endianness}} Packet\+Base\+::\+\_\+endianness = \mbox{\hyperlink{namespacecdp_ac102d5f439f89bb0f7c692f1da47cf48}{cdp\+::get\+Endianness}}()\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Holds the memory endianness of the target on which the packet exists. 
+
+
+
+Definition at line 74 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_ae1cdc5c0aff94ee72937f6582847ee50}\label{class_packet_base_ae1cdc5c0aff94ee72937f6582847ee50}} 
+\index{PacketBase@{PacketBase}!\_outputStream@{\_outputStream}}
+\index{\_outputStream@{\_outputStream}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{\_outputStream}{\_outputStream}}
+{\footnotesize\ttfamily std\+::ostream$\ast$ Packet\+Base\+::\+\_\+output\+Stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Holds a pointer to the desired output stream. 
+
+
+
+Definition at line 76 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_aeeb20d3dd0a3d8500f6b8e5764923919}\label{class_packet_base_aeeb20d3dd0a3d8500f6b8e5764923919}} 
+\index{PacketBase@{PacketBase}!\_packetData@{\_packetData}}
+\index{\_packetData@{\_packetData}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{\_packetData}{\_packetData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ Packet\+Base\+::\+\_\+packet\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Holds a pointer to the packet data. 
+
+
+
+Definition at line 70 of file Packet\+Base.\+hpp.
+
+\mbox{\Hypertarget{class_packet_base_a78a78571a8a5429ee160670a4ce76238}\label{class_packet_base_a78a78571a8a5429ee160670a4ce76238}} 
+\index{PacketBase@{PacketBase}!\_packetLength@{\_packetLength}}
+\index{\_packetLength@{\_packetLength}!PacketBase@{PacketBase}}
+\doxysubsubsection{\texorpdfstring{\_packetLength}{\_packetLength}}
+{\footnotesize\ttfamily size\+\_\+t Packet\+Base\+::\+\_\+packet\+Length\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Holds the packet length. 
+
+
+
+Definition at line 72 of file Packet\+Base.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Packet/\mbox{\hyperlink{_packet_base_8hpp}{Packet\+Base.\+hpp}}\end{DoxyCompactItemize}

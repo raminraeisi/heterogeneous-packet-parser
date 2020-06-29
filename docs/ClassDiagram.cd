@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PacketBattery" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\src\Packet\PacketBattery.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketVoltageCurrent" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="5.25" />
+    <InheritanceLine Type="PacketTemplate&lt;NewPacket, ID, _First, ..._Rest&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="3.244" Y="2.57" />
+        <Point X="3.244" Y="3.2" />
+        <Point X="7.375" Y="3.2" />
+        <Point X="7.375" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAGAAAAAAASAAAEAAAAAAAAAAAQAAAAQABA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\src\Packet\PacketVoltageCurrent.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Factory&lt;CommonInterface&gt;" Collapsed="true">
+    <Position X="7" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAIAAAAAAAAAABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Factory\Factory.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryRegistrar&lt;Interface, Derived, Factory, ID&gt;" Collapsed="true">
+    <Position X="3" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Factory\FactoryRegistrar.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketBase" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAACAEAAIAUAAAAAAAAAAAACCAAEAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Packet\PacketBase.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketFactory" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Packet\PacketFactory.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketTemplate&lt;NewPacket, ID, _First, ..._Rest&gt;" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="3.5" />
+    <InheritanceLine Type="FactoryRegistrar&lt;Interface, Derived, Factory, ID&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4.875" Y="1.062" />
+        <Point X="4.875" Y="1.375" />
+        <Point X="3.562" Y="1.375" />
+        <Point X="3.562" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABCgCAAAAAAAAAAAAAAAAAAAAAAACAAIAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Packet\PacketTemplate.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="cdp::hash_pair" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Globals.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="cdp::Endianness" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\rr\Desktop\CDP\include\Globals.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

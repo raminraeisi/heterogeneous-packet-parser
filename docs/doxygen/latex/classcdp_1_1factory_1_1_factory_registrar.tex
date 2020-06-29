@@ -1,0 +1,86 @@
+\hypertarget{classcdp_1_1factory_1_1_factory_registrar}{}\doxysection{cdp\+::factory\+::Factory\+Registrar$<$ Interface, Derived, Factory, ID $>$ Class Template Reference}
+\label{classcdp_1_1factory_1_1_factory_registrar}\index{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$@{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$}}
+
+
+\+: \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}} Registrar Class  
+
+
+
+
+{\ttfamily \#include $<$Factory\+Registrar.\+hpp$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Interface $\ast$ \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar_a5dccc25be3e08e67709635bc918c48bc}{Create\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar_a4eae2737208f1f8a3e67845114146118}{\+\_\+registered}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Interface, class Derived, class Factory, cdp\+::globals\+::\+Packet\+I\+D\+Type ID$>$\newline
+class cdp\+::factory\+::\+Factory\+Registrar$<$ Interface, Derived, Factory, I\+D $>$}
+
+\+: \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}} Registrar Class 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Interface} & the pure abstract class which is the base class of all registered and derived classes in the factory \\
+\hline
+{\em Derived} & the class which is going to be registered \\
+\hline
+{\em \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}}} & the factory class in which the derived class would be registered \\
+\hline
+{\em ID} & the desired id by which the derived class would be registered in the factory \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 24 of file Factory\+Registrar.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_registrar_a5dccc25be3e08e67709635bc918c48bc}\label{classcdp_1_1factory_1_1_factory_registrar_a5dccc25be3e08e67709635bc918c48bc}} 
+\index{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$@{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$@{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily template$<$class Interface , class Derived , class Factory , cdp\+::globals\+::\+Packet\+I\+D\+Type ID$>$ \\
+static Interface$\ast$ \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar}{cdp\+::factory\+::\+Factory\+Registrar}}$<$ Interface, Derived, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}}, ID $>$\+::Create\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+A static method which is responsible for the creation of an instance of the derived class using . it will be called by the facgory class in case of need ~\newline
+ 
+
+Definition at line 33 of file Factory\+Registrar.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_registrar_a4eae2737208f1f8a3e67845114146118}\label{classcdp_1_1factory_1_1_factory_registrar_a4eae2737208f1f8a3e67845114146118}} 
+\index{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$@{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$}!\_registered@{\_registered}}
+\index{\_registered@{\_registered}!cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$@{cdp::factory::FactoryRegistrar$<$ Interface, Derived, Factory, ID $>$}}
+\doxysubsubsection{\texorpdfstring{\_registered}{\_registered}}
+{\footnotesize\ttfamily template$<$class Base , class Derived , class Factory , cdp\+::globals\+::\+Packet\+I\+D\+Type ID$>$ \\
+bool \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar}{cdp\+::factory\+::\+Factory\+Registrar}}$<$ Base, Derived, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}}, ID $>$\+::\+\_\+registered\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a114c89aa32a1278255cf26b8c14320e9}{Factory::Register}}(ID, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar_a5dccc25be3e08e67709635bc918c48bc}{FactoryRegistrar::CreateInstance}})}
+
+\end{DoxyCode}
+A static member which its initilization will do the trick of initialization of the derived class prior to the main function
+
+\+\_\+registered member initialization which will eventually do the trick of derived class initilization 
+
+Definition at line 28 of file Factory\+Registrar.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Factory/\mbox{\hyperlink{_factory_registrar_8hpp}{Factory\+Registrar.\+hpp}}\end{DoxyCompactItemize}

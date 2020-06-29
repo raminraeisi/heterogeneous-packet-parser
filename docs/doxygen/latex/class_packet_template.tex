@@ -1,0 +1,170 @@
+\hypertarget{class_packet_template}{}\doxysection{Packet\+Template$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$ Class Template Reference}
+\label{class_packet_template}\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+
+
+\+: A template based class which is derived from \mbox{\hyperlink{class_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the \mbox{\hyperlink{class_packet_factory}{Packet\+Factory}} 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer  
+
+
+
+
+{\ttfamily \#include $<$Packet\+Template.\+hpp$>$}
+
+Inheritance diagram for Packet\+Template$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.439589cm]{class_packet_template}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_packet_template_af0dbc97077afc9b956a27bcc1c6c85de}{Packet\+Template}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}{update\+From\+Memory}} (void $\ast$from\+Address) override
+\begin{DoxyCompactList}\small\item\em Updates the internal packet data from an external memry region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_packet_template_af4ac96bdad45954139fb3ed2acc190fe}{\+\_\+data}} \mbox{[}\mbox{\hyperlink{class_packet_template_abe3c6920dc08c22769ee5adb62be1b2f}{Packet\+Template\+::\+\_\+tuple\+Length}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Internal representation of the packet data. \end{DoxyCompactList}\item 
+std\+::tuple$<$ \+\_\+\+First, \+\_\+\+Rest... $>$ \mbox{\hyperlink{class_packet_template_ad10182a875a0691d9f2c7460eaed8489}{\+\_\+tuple}} \{\}
+\begin{DoxyCompactList}\small\item\em The tuple which stores the pointers to the fields in the packet buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_packet_template_a8cc772252a94f51b30ed5a6a94523065}{\+\_\+prev\+Packet\+Delta\+Time}}
+\begin{DoxyCompactList}\small\item\em Holds the delta time between voltage/current packets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{class_packet_template_abe3c6920dc08c22769ee5adb62be1b2f}{\+\_\+tuple\+Length}} = \mbox{\hyperlink{namespacecdp_a753b94238e34fb101bc270031f9de75f}{cdp\+::size\+Of\+Tuple\+Elements}}(std\+::tuple$<$\+\_\+\+First, \+\_\+\+Rest...$>$\{\})
+\begin{DoxyCompactList}\small\item\em Automatically calculates the packet length by sum of the tuple element sizes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class New\+Packet, cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First, class ... \+\_\+\+Rest$>$\newline
+class Packet\+Template$<$ New\+Packet, I\+D, \+\_\+\+First, \+\_\+\+Rest $>$}
+
+\+: A template based class which is derived from \mbox{\hyperlink{class_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the \mbox{\hyperlink{class_packet_factory}{Packet\+Factory}} 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em New\+Packet} & refers to the new packet class to be defined \\
+\hline
+{\em ID} & desired new packet ID \\
+\hline
+{\em \+\_\+\+First} & Pointer type to the first field of the packet \\
+\hline
+{\em \+\_\+\+Rest...} & Pointer type to the rest fields of the packet \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 30 of file Packet\+Template.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_packet_template_af0dbc97077afc9b956a27bcc1c6c85de}\label{class_packet_template_af0dbc97077afc9b956a27bcc1c6c85de}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!PacketTemplate@{PacketTemplate}}
+\index{PacketTemplate@{PacketTemplate}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{PacketTemplate()}{PacketTemplate()}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+\mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::\mbox{\hyperlink{class_packet_template}{Packet\+Template}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor which initializes \mbox{\hyperlink{class_packet_base}{Packet\+Base}} class values and internal strucutre of t 
+
+Definition at line 35 of file Packet\+Template.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}\label{class_packet_template_a53bf16d4ed28419b89ab08449dbb281c}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!updateFromMemory@{updateFromMemory}}
+\index{updateFromMemory@{updateFromMemory}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{updateFromMemory()}{updateFromMemory()}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+virtual bool \mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::update\+From\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{from\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the internal packet data from an external memry region. 
+
+Will check the target endianness and correct the byte order of fields in R\+AM if needed
+
+Reimplemented from \mbox{\hyperlink{class_packet_base_ac850e212771641c9a20c15b68806f609}{Packet\+Base}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_packet_voltage_current_a380321a28efd3810efb67a272709298f}{Packet\+Voltage\+Current}}, and \mbox{\hyperlink{class_packet_battery_a98ecdf1e9c7f7bdf59d28a9410301de5}{Packet\+Battery}}.
+
+
+
+Definition at line 43 of file Packet\+Template.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_packet_template_af4ac96bdad45954139fb3ed2acc190fe}\label{class_packet_template_af4ac96bdad45954139fb3ed2acc190fe}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_data@{\_data}}
+\index{\_data@{\_data}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::\+\_\+data\mbox{[}\mbox{\hyperlink{class_packet_template_abe3c6920dc08c22769ee5adb62be1b2f}{Packet\+Template\+::\+\_\+tuple\+Length}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal representation of the packet data. 
+
+
+
+Definition at line 72 of file Packet\+Template.\+hpp.
+
+\mbox{\Hypertarget{class_packet_template_a8cc772252a94f51b30ed5a6a94523065}\label{class_packet_template_a8cc772252a94f51b30ed5a6a94523065}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_prevPacketDeltaTime@{\_prevPacketDeltaTime}}
+\index{\_prevPacketDeltaTime@{\_prevPacketDeltaTime}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{\_prevPacketDeltaTime}{\_prevPacketDeltaTime}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::\+\_\+prev\+Packet\+Delta\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Holds the delta time between voltage/current packets. 
+
+
+
+Definition at line 78 of file Packet\+Template.\+hpp.
+
+\mbox{\Hypertarget{class_packet_template_ad10182a875a0691d9f2c7460eaed8489}\label{class_packet_template_ad10182a875a0691d9f2c7460eaed8489}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_tuple@{\_tuple}}
+\index{\_tuple@{\_tuple}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{\_tuple}{\_tuple}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+std\+::tuple$<$\+\_\+\+First, \+\_\+\+Rest...$>$ \mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::\+\_\+tuple \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The tuple which stores the pointers to the fields in the packet buffer. 
+
+
+
+Definition at line 75 of file Packet\+Template.\+hpp.
+
+\mbox{\Hypertarget{class_packet_template_abe3c6920dc08c22769ee5adb62be1b2f}\label{class_packet_template_abe3c6920dc08c22769ee5adb62be1b2f}} 
+\index{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_tupleLength@{\_tupleLength}}
+\index{\_tupleLength@{\_tupleLength}!PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
+\doxysubsubsection{\texorpdfstring{\_tupleLength}{\_tupleLength}}
+{\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
+constexpr size\+\_\+t \mbox{\hyperlink{class_packet_template}{Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::\+\_\+tuple\+Length = \mbox{\hyperlink{namespacecdp_a753b94238e34fb101bc270031f9de75f}{cdp\+::size\+Of\+Tuple\+Elements}}(std\+::tuple$<$\+\_\+\+First, \+\_\+\+Rest...$>$\{\})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+Automatically calculates the packet length by sum of the tuple element sizes. 
+
+
+
+Definition at line 69 of file Packet\+Template.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Packet/\mbox{\hyperlink{_packet_template_8hpp}{Packet\+Template.\+hpp}}\end{DoxyCompactItemize}

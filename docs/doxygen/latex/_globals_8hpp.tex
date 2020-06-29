@@ -1,0 +1,74 @@
+\hypertarget{_globals_8hpp}{}\doxysection{C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Globals.hpp File Reference}
+\label{_globals_8hpp}\index{C:/Users/rr/Desktop/CDP/include/Globals.hpp@{C:/Users/rr/Desktop/CDP/include/Globals.hpp}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcdp_1_1globals_1_1hash__pair}{cdp\+::globals\+::hash\+\_\+pair}}
+\begin{DoxyCompactList}\small\item\em Defines a custom hash for std\+::pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecdp}{cdp}}
+\item 
+ \mbox{\hyperlink{namespacecdp_1_1globals}{cdp\+::globals}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_globals_8hpp_a0cbcd8d251a047278d0166f5ccde416a}{C\+H\+E\+C\+K\+\_\+\+A\+N\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+IF}}(V\+AR,  OP,  V\+AL,  M\+E\+S\+S\+A\+GE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecdp_1_1globals_adf45fc4a85f933373df7322b9306cb46}{cdp\+::globals\+::\+Packet\+I\+D\+Type}} = uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em Type alias for the I\+Ds of the packets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604e}{cdp\+::globals\+::\+Endianness}} \{ \mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604ea3c0ba6b22b526d7fd50c3026435a8c02}{cdp\+::globals\+::\+Endianness\+::\+Little\+Endian}}, 
+\mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604ea2ce7a92ae43763828ac4acb4560c2a5b}{cdp\+::globals\+::\+Endianness\+::\+Big\+Endian}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum class type for the target endianness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Endianness \mbox{\hyperlink{namespacecdp_1_1globals_a8c145cdfba551a974065f5dad577baed}{cdp\+::globals\+::get\+Endianness}} ()
+\begin{DoxyCompactList}\small\item\em Function for retrieving the target endianness. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacecdp_1_1globals_a2f7b79354421c78d96033a99fe863069}{cdp\+::globals\+::size\+Of\+Tuple\+Elements}} (std\+::tuple$<$ Args... $>$ const \&)
+\begin{DoxyCompactList}\small\item\em Calculates sum of size of a tuple elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecdp_1_1globals_a4962de5a696e1f89720137914caa7c06}{cdp\+::globals\+::swap\+Endian}} (T u)
+\begin{DoxyCompactList}\small\item\em Inverts the endianness of a numeric variable of type T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Op , typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_acc1a18fb564a31c449475fe4ee134db8}{cdp\+::globals\+::fold\+Operation}} (Op \&\&op, T1 arg1, T2 arg2)
+\begin{DoxyCompactList}\small\item\em Template function which perform an operation on two variables with possible different types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Op , typename T , typename ... Ts$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a301dd7f5b5fb4d0200ef64e2f26de579}{cdp\+::globals\+::fold\+Operation}} (Op \&\&op, T head, Ts ... rest)
+\item 
+{\footnotesize template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a5304bb6e36c74c78fb51532cf4f49a42}{cdp\+::globals\+::find\+Range\+Helper}} (const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&ranges, Operator \&\&op, T\+First first, T\+Rest ... rest)
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespacecdp_1_1globals_a500a03cc6c19d1fd5575e74aac8e361c}{cdp\+::globals\+::string\+Format}} (const std\+::string \&format, Args ... args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_globals_8hpp_a0cbcd8d251a047278d0166f5ccde416a}\label{_globals_8hpp_a0cbcd8d251a047278d0166f5ccde416a}} 
+\index{Globals.hpp@{Globals.hpp}!CHECK\_AND\_REPORT\_ERROR\_IF@{CHECK\_AND\_REPORT\_ERROR\_IF}}
+\index{CHECK\_AND\_REPORT\_ERROR\_IF@{CHECK\_AND\_REPORT\_ERROR\_IF}!Globals.hpp@{Globals.hpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_AND\_REPORT\_ERROR\_IF}{CHECK\_AND\_REPORT\_ERROR\_IF}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+A\+N\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{V\+AR,  }\item[{}]{OP,  }\item[{}]{V\+AL,  }\item[{}]{M\+E\+S\+S\+A\+GE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (VAR OP  VAL) \{\(\backslash\)}
+\DoxyCodeLine{        reportErrorLine(MESSAGE); \(\backslash\)}
+\DoxyCodeLine{        return(\textcolor{keyword}{false}); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line 16 of file Globals.\+hpp.
+

@@ -1,0 +1,18 @@
+\hypertarget{_packet_template_8hpp}{}\doxysection{C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Packet/\+Packet\+Template.hpp File Reference}
+\label{_packet_template_8hpp}\index{C:/Users/rr/Desktop/CDP/include/Packet/PacketTemplate.hpp@{C:/Users/rr/Desktop/CDP/include/Packet/PacketTemplate.hpp}}
+{\ttfamily \#include $<$Globals.\+hpp$>$}\newline
+{\ttfamily \#include $<$Packet/\+Packet\+Base.\+hpp$>$}\newline
+{\ttfamily \#include $<$Packet/\+Packet\+Factory.\+hpp$>$}\newline
+{\ttfamily \#include $<$Factory/\+Factory\+Registrar.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template}{cdp\+::packet\+::\+Packet\+Template$<$ New\+Packet, I\+D, \+\_\+\+First, \+\_\+\+Rest $>$}}
+\begin{DoxyCompactList}\small\item\em \+: A template based class which is derived from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the Packet\+Factory 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecdp}{cdp}}
+\item 
+ \mbox{\hyperlink{namespacecdp_1_1packet}{cdp\+::packet}}
+\end{DoxyCompactItemize}

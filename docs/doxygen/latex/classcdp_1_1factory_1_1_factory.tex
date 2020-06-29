@@ -1,0 +1,205 @@
+\hypertarget{classcdp_1_1factory_1_1_factory}{}\doxysection{cdp\+::factory\+::Factory$<$ Common\+Interface $>$ Class Template Reference}
+\label{classcdp_1_1factory_1_1_factory}\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+
+
+\+: A Generic \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}} Class  
+
+
+
+
+{\ttfamily \#include $<$Factory.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}} = Common\+Interface $\ast$($\ast$)()
+\begin{DoxyCompactList}\small\item\em Type definition for the Create\+Instance method provided by any to be registered class. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}{Registered\+Classes\+Map}} = std\+::unordered\+\_\+map$<$ uint8\+\_\+t, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}} $>$
+\begin{DoxyCompactList}\small\item\em Type definition for the map of registered classes in factory. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}} = std\+::shared\+\_\+ptr$<$ Common\+Interface $>$
+\begin{DoxyCompactList}\small\item\em Type definition for the Get\+Instance method provided by any to be registered class. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}{Instances\+Map}} = std\+::unordered\+\_\+map$<$ uint8\+\_\+t, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}} $>$
+\begin{DoxyCompactList}\small\item\em Type definition for the map of currently created instances in factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}{Instances\+Map}} \& \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a2fea2ca86f4aa653c06f369e82b99783}{Instances}} ()
+\begin{DoxyCompactList}\small\item\em Returns the reference of map of instantiated classes in factory. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}{Registered\+Classes\+Map}} \& \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a08f4f9f35ce2a5aeaf40df5c008f995d}{Registered\+Classes}} ()
+\begin{DoxyCompactList}\small\item\em Returns the reference of map of registered classes in factory. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}} \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_ad35b59b3a2e0185dd06e0a1ff30c0b3e}{Get\+Object}} (\mbox{\hyperlink{namespacecdp_1_1globals_adf45fc4a85f933373df7322b9306cb46}{cdp\+::globals\+::\+Packet\+I\+D\+Type}} class\+ID)
+\begin{DoxyCompactList}\small\item\em Possibly creates and returns an instance of a registered class in factory. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a114c89aa32a1278255cf26b8c14320e9}{Register}} (uint8\+\_\+t id, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}} create\+Instance\+Function)
+\begin{DoxyCompactList}\small\item\em Registers a class in factory by an id and its Create\+Instance method pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Interface , class Derived , class Factory , cdp\+::globals\+::\+Packet\+I\+D\+Type ID$>$ }\\class \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a7e370274bee44fcf058baf4ecab4b73b}{Factory\+Registrar}}
+\begin{DoxyCompactList}\small\item\em Makes the factory register method accessible by any \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar}{Factory\+Registrar}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Common\+Interface$>$\newline
+class cdp\+::factory\+::\+Factory$<$ Common\+Interface $>$}
+
+\+: A Generic \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{Factory}} Class 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Common\+Interface} & refers to the common abstract class from which to be registered classses have been inherited from \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 21 of file Factory.\+hpp.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}\label{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!CreateInstanceCallable@{CreateInstanceCallable}}
+\index{CreateInstanceCallable@{CreateInstanceCallable}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{CreateInstanceCallable}{CreateInstanceCallable}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}} =  Common\+Interface $\ast$ ($\ast$)()}
+
+
+
+Type definition for the Create\+Instance method provided by any to be registered class. 
+
+
+
+Definition at line 28 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}\label{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!InstancePtr@{InstancePtr}}
+\index{InstancePtr@{InstancePtr}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{InstancePtr}{InstancePtr}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}} =  std\+::shared\+\_\+ptr$<$Common\+Interface$>$}
+
+
+
+Type definition for the Get\+Instance method provided by any to be registered class. 
+
+
+
+Definition at line 33 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}\label{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!InstancesMap@{InstancesMap}}
+\index{InstancesMap@{InstancesMap}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{InstancesMap}{InstancesMap}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}{Instances\+Map}} =  std\+::unordered\+\_\+map$<$uint8\+\_\+t, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}}$>$}
+
+
+
+Type definition for the map of currently created instances in factory. 
+
+
+
+Definition at line 35 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}\label{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!RegisteredClassesMap@{RegisteredClassesMap}}
+\index{RegisteredClassesMap@{RegisteredClassesMap}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{RegisteredClassesMap}{RegisteredClassesMap}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+using \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}{Registered\+Classes\+Map}} =  std\+::unordered\+\_\+map$<$uint8\+\_\+t, \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}}$>$}
+
+
+
+Type definition for the map of registered classes in factory. 
+
+
+
+Definition at line 30 of file Factory.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_ad35b59b3a2e0185dd06e0a1ff30c0b3e}\label{classcdp_1_1factory_1_1_factory_ad35b59b3a2e0185dd06e0a1ff30c0b3e}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!GetObject@{GetObject}}
+\index{GetObject@{GetObject}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{GetObject()}{GetObject()}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_acda1b7cb19ef228fb7d6470de3cce2a1}{Instance\+Ptr}} \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::Get\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecdp_1_1globals_adf45fc4a85f933373df7322b9306cb46}{cdp\+::globals\+::\+Packet\+I\+D\+Type}}}]{class\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Possibly creates and returns an instance of a registered class in factory. 
+
+
+
+Definition at line 51 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a2fea2ca86f4aa653c06f369e82b99783}\label{classcdp_1_1factory_1_1_factory_a2fea2ca86f4aa653c06f369e82b99783}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!Instances@{Instances}}
+\index{Instances@{Instances}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{Instances()}{Instances()}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a9143179ff9f67027045e2eeffacd9dd1}{Instances\+Map}}\& \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the reference of map of instantiated classes in factory. 
+
+
+
+Definition at line 39 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a114c89aa32a1278255cf26b8c14320e9}\label{classcdp_1_1factory_1_1_factory_a114c89aa32a1278255cf26b8c14320e9}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!Register@{Register}}
+\index{Register@{Register}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+static bool \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{\mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a868ec06626f2a7301141fd1f3e08deb7}{Create\+Instance\+Callable}}}]{create\+Instance\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Registers a class in factory by an id and its Create\+Instance method pointer. 
+
+
+
+Definition at line 63 of file Factory.\+hpp.
+
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a08f4f9f35ce2a5aeaf40df5c008f995d}\label{classcdp_1_1factory_1_1_factory_a08f4f9f35ce2a5aeaf40df5c008f995d}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!RegisteredClasses@{RegisteredClasses}}
+\index{RegisteredClasses@{RegisteredClasses}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{RegisteredClasses()}{RegisteredClasses()}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+static \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_a10ea0ab28a303866760f548b732910f5}{Registered\+Classes\+Map}}\& \mbox{\hyperlink{classcdp_1_1factory_1_1_factory}{cdp\+::factory\+::\+Factory}}$<$ Common\+Interface $>$\+::Registered\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the reference of map of registered classes in factory. 
+
+
+
+Definition at line 45 of file Factory.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classcdp_1_1factory_1_1_factory_a7e370274bee44fcf058baf4ecab4b73b}\label{classcdp_1_1factory_1_1_factory_a7e370274bee44fcf058baf4ecab4b73b}} 
+\index{cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}!FactoryRegistrar@{FactoryRegistrar}}
+\index{FactoryRegistrar@{FactoryRegistrar}!cdp::factory::Factory$<$ CommonInterface $>$@{cdp::factory::Factory$<$ CommonInterface $>$}}
+\doxysubsubsection{\texorpdfstring{FactoryRegistrar}{FactoryRegistrar}}
+{\footnotesize\ttfamily template$<$class Common\+Interface $>$ \\
+template$<$class Interface , class Derived , class Factory , cdp\+::globals\+::\+Packet\+I\+D\+Type ID$>$ \\
+friend class \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar}{Factory\+Registrar}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Makes the factory register method accessible by any \mbox{\hyperlink{classcdp_1_1factory_1_1_factory_registrar}{Factory\+Registrar}} class. 
+
+
+
+Definition at line 25 of file Factory.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Factory/\mbox{\hyperlink{_factory_8hpp}{Factory.\+hpp}}\end{DoxyCompactItemize}

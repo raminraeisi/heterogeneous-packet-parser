@@ -1,0 +1,81 @@
+\hypertarget{classcdp_1_1packet_1_1_packet_battery}{}\doxysection{cdp\+::packet\+::Packet\+Battery Class Reference}
+\label{classcdp_1_1packet_1_1_packet_battery}\index{cdp::packet::PacketBattery@{cdp::packet::PacketBattery}}
+
+
+\+: A template based class which is derived from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the Packet\+Factory 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer  
+
+
+Inheritance diagram for cdp\+::packet\+::Packet\+Battery\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.354839cm]{classcdp_1_1packet_1_1_packet_battery}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcdp_1_1packet_1_1_packet_battery_a15f81754c5791b09972362c2b8d41ebc}{Packet\+Battery}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_battery_a14c0c69a2a18e38382c5093cab0af144}{update\+From\+Memory}} (void $\ast$from\+Address) final
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\+: A template based class which is derived from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the Packet\+Factory 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em New\+Packet} & refers to the new packet class to be defined \\
+\hline
+{\em ID} & desired new packet ID \\
+\hline
+{\em \+\_\+\+First} & Pointer type to the first field of the packet \\
+\hline
+{\em \+\_\+\+Rest...} & Pointer type to the rest fields of the packet \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 23 of file Packet\+Battery.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_battery_a15f81754c5791b09972362c2b8d41ebc}\label{classcdp_1_1packet_1_1_packet_battery_a15f81754c5791b09972362c2b8d41ebc}} 
+\index{cdp::packet::PacketBattery@{cdp::packet::PacketBattery}!PacketBattery@{PacketBattery}}
+\index{PacketBattery@{PacketBattery}!cdp::packet::PacketBattery@{cdp::packet::PacketBattery}}
+\doxysubsubsection{\texorpdfstring{PacketBattery()}{PacketBattery()}}
+{\footnotesize\ttfamily cdp\+::packet\+::\+Packet\+Battery\+::\+Packet\+Battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Prevents the compiler from optimising out the \+\_\+registered variable in the Factory\+Registrar class ~\newline
+
+
+Definition at line 27 of file Packet\+Battery.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_battery_a14c0c69a2a18e38382c5093cab0af144}\label{classcdp_1_1packet_1_1_packet_battery_a14c0c69a2a18e38382c5093cab0af144}} 
+\index{cdp::packet::PacketBattery@{cdp::packet::PacketBattery}!updateFromMemory@{updateFromMemory}}
+\index{updateFromMemory@{updateFromMemory}!cdp::packet::PacketBattery@{cdp::packet::PacketBattery}}
+\doxysubsubsection{\texorpdfstring{updateFromMemory()}{updateFromMemory()}}
+{\footnotesize\ttfamily bool cdp\+::packet\+::\+Packet\+Battery\+::update\+From\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{from\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+Overrides the base class method to specialize its operation based on the battery packet specs, reports to the output as well defines structure binding for a clear view of tuple
+
+Reimplemented from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template_a521e815ad5a64f940bdd01662c783886}{cdp\+::packet\+::\+Packet\+Template$<$ Packet\+Battery, 1, uint8\+\_\+t $\ast$, uint32\+\_\+t $\ast$, uint8\+\_\+t $\ast$, uint8\+\_\+t $\ast$ $>$}}.
+
+
+
+Definition at line 35 of file Packet\+Battery.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/src/\+Packet/\mbox{\hyperlink{_packet_battery_8cpp}{Packet\+Battery.\+cpp}}\end{DoxyCompactItemize}
