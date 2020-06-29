@@ -82,13 +82,13 @@ namespace cdp {
         }
 
         template<typename RangesType, typename Operator, typename TFirst, typename ... TRest>
-        auto findRangeHelper(const std::vector<std::pair<RangesType, RangesType>>& ranges, Operator&& op, TFirst first, TRest ... rest)
+        size_t findRangeHelper(const std::vector<std::pair<RangesType, RangesType>>& ranges, Operator&& op, TFirst first, TRest ... rest)
         {
             auto finalValue = foldOperation(op, first, rest...);
             auto it = std::find_if(ranges.begin(), ranges.end(),
                 [&](const std::pair<size_t, size_t>& element) { return (finalValue >= element.first && finalValue <= element.second); }
             );
-            auto index = it - ranges.begin();
+            size_t index = it - ranges.begin();
             return index;
         }
 
