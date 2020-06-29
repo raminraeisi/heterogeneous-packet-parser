@@ -22,7 +22,7 @@ namespace cdp {
         class PacketBase {
         public:
             /// Constructor
-            PacketBase() : _outputStream(nullptr) {
+            PacketBase() : _outputStream(nullptr), _packetLength(0), _packetData(nullptr) {
             }
 
             /// Reports an error message to the specified output stream
