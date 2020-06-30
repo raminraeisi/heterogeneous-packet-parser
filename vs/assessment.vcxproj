@@ -147,7 +147,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\main.cpp" />
-    <ClCompile Include="..\src\Globals.cpp" />
     <ClCompile Include="..\src\Packet\PacketBattery.cpp" />
     <ClCompile Include="..\src\Packet\PacketVoltageCurrent.cpp" />
   </ItemGroup>
@@ -160,7 +159,7 @@
     <ClInclude Include="..\include\Packet\PacketTemplate.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="..\docs\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,18 +21,19 @@ public:
 public:
     /// Overrides the base class method to specialize its operation based on the 
     /// voltage/current packet requirements
-    bool updateFromMemory(void* fromAddress) final {
-        bool succeeded = PacketTemplate::updateFromMemory(fromAddress);
- 
-        if (succeeded) {
-            /// Defines structure binding for tuple elements
-            auto& [packetType, time, voltage, current, check] = _tuple;
-            auto tempNewState = cdp::globals::findRangeHelper(viablePowerRanges, std::multiplies{}, voltage, current);
-            if (tempNewState < viablePowerRanges.size()) {
-                tryToChangeState(tempNewState);
-            }
+    bool updateFromMemory(uint8_t* fromAddress) final {
+        if (!PacketTemplate::updateFromMemory(fromAddress)) {
+            return(false);
         }
-        return(succeeded);
+
+        /// Defines structure binding for tuple elements
+        auto& [packetType, time, voltage, current, check] = _tuple;
+        auto tempNewState = cdp::globals::findRangeHelper(viablePowerRanges, std::multiplies{}, voltage, current);
+        if (tempNewState < viablePowerRanges.size()) {
+            tryToChangeState(tempNewState);
+        }
+
+        return(true);
     }
 
 private:

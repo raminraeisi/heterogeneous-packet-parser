@@ -32,7 +32,7 @@ public:
 
     /// Overrides the base class method to specialize its operation based on the 
     /// battery packet specs, reports to the output as well
-    bool updateFromMemory(void* fromAddress) final {
+    bool updateFromMemory(uint8_t* fromAddress) final {
         if (!PacketTemplate::updateFromMemory(fromAddress)) {
             return(false);
         }

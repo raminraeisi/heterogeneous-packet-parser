@@ -27,7 +27,14 @@ namespace cdp {
         enum class Endianness { LittleEndian, BigEndian };
 
         /// Function for retrieving the target endianness
-        Endianness getEndianness();
+        inline Endianness getEndianness() {
+            unsigned int i = 1;
+            char* c = (char*)&i;
+            if (*c)
+                return(cdp::globals::Endianness::LittleEndian);
+            else
+                return(cdp::globals::Endianness::BigEndian);
+        }
 
         /// Defines a custom hash for std::pair
         struct hash_pair {
@@ -44,26 +51,6 @@ namespace cdp {
         template <typename ... Args>
         constexpr std::size_t sizeOfTupleElements(std::tuple<Args...> const&) {
             return (sizeof(std::remove_pointer_t<Args>) + ...);
-        }
-
-        /// Inverts the endianness of a numeric variable of type T
-        template <typename T>
-        T swapEndian(T u)
-        {
-            static_assert (CHAR_BIT == 8, "CHAR_BIT != 8");
-
-            union
-            {
-                T u;
-                unsigned char u8[sizeof(T)];
-            } source, dest;
-
-            source.u = u;
-
-            for (size_t k = 0; k < sizeof(T); k++)
-                dest.u8[k] = source.u8[sizeof(T) - k - 1];
-
-            return dest.u;
         }
 
         /// Template function which perform an operation on two variables with possible different types

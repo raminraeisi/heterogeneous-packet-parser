@@ -6,9 +6,6 @@
 #ifndef PACKETBASE_HPP
 #define PACKETBASE_HPP
 
-#include <cstring>
-#include <cstdint>
-#include <iostream>
 #include <string_view>
 #include <Globals.hpp>
 
@@ -48,31 +45,43 @@ namespace cdp {
                 return(_packetLength);
             }
 
-            /// Updates the internal packet data using from a provided memory region
-            /// anbd returns the result if succeeded or not
-            virtual bool updateFromMemory(void* fromAddress) {
-                std::memcpy(_packetData, fromAddress, _packetLength);
-                return(!hasError());
-            }
-        protected:
-            /// Checks correctness of the Error Check Byte
-            bool hasError() {
-                bool ret;
-                uint8_t error = 0, i;
-                for (i = 0; i < _packetLength - 1; ++i) {
-                    error += _packetData[i];
-                }
-                if (ret = _packetData[i] != error; ret) {
-                    reportErrorLine("ERR:Error Check");
-                }
-                return(ret);
-            }
+            /// Updates the internal packet data using a provided source memory 
+            /// region and returns the result if succeeded or not based on the 
+            /// calculated error and the real error field
+            virtual bool updateFromMemory(uint8_t* fromAddress) {
+                size_t currentFieldIndex;
+                size_t packetIndex = 0;
+                uint8_t error = 0;
+                int8_t delta = +1;
 
+                if (_endianness != cdp::globals::Endianness::BigEndian)
+                    delta = -1;
+
+                for (size_t i = 0; i < _fieldOffsets.size()-1; ++i) {
+
+                    size_t currentFieldLength = _fieldOffsets[i + 1] - _fieldOffsets[i];
+                    if (_endianness == cdp::globals::Endianness::LittleEndian) {
+                        currentFieldIndex = _fieldOffsets[i + 1] - 1;
+                    }
+                    else {
+                        currentFieldIndex = _fieldOffsets[i];
+                    }
+                    while (currentFieldLength--) {
+                        _packetData[packetIndex++] = fromAddress[currentFieldIndex];
+                        if (packetIndex < _packetLength)
+                            error += fromAddress[currentFieldIndex];
+                        currentFieldIndex += delta;
+                    }
+                }
+                return(error == _packetData[_packetLength - 1]);
+            }
         protected:
             /// Holds a pointer to the packet data
             uint8_t* _packetData;
             /// Holds the packet length
             size_t _packetLength;
+
+            std::vector<size_t> _fieldOffsets;
             /// Holds the memory endianness of the target on which the packet exists
             inline static cdp::globals::Endianness _endianness = cdp::globals::getEndianness();
             /// Holds a pointer to the desired output stream

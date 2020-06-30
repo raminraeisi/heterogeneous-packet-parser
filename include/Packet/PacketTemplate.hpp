@@ -44,21 +44,10 @@ public:
 
 public:
     /// Updates the internal packet data from an external memry region
-    virtual bool updateFromMemory(void* fromAddress) override {
+    virtual bool updateFromMemory(uint8_t* fromAddress) override {
         if (!PacketBase::updateFromMemory(fromAddress)) {
             return(false);
         }
-
-        /// Will check the target endianness and correct the byte order of fields
-        /// in RAM if needed
-        if (_endianness != cdp::globals::Endianness::BigEndian) {
-            std::apply(
-                [&](auto&&... elem) {
-                    ((*elem = cdp::globals::swapEndian(*elem)), ...);
-                }
-            , _tuple);
-        }
-
         auto& time = *std::get<1>(_tuple);
 
         auto dt = time - _prevPacketDeltaTime;
@@ -81,19 +70,20 @@ protected:
     /// Holds the delta time between voltage/current packets
     uint32_t _prevPacketDeltaTime;
 private:
-    /// Updates the typed pointers in the tuple to point to the corespondent fields
-    /// using the correspondent type sizes
+    /// Updates the typed pointers in the tuple to point to their corresponding fields
+    /// using their pointee types
     void setElementPointers() {
-        size_t offsets[std::tuple_size<decltype(_tuple)>::value + 1]{0};
+        _fieldOffsets.resize(std::tuple_size<decltype(_tuple)>::value + 1);
+        std::fill(_fieldOffsets.begin(), _fieldOffsets.end(), 0);
         size_t index = 1;
         std::apply(
             [&](auto&&... elem) {
-                ((offsets[index++] = (sizeof(*elem) + offsets[(--index)++])), ...);
+                ((_fieldOffsets[index++] = (sizeof(*elem) + _fieldOffsets[(--index)++])), ...);
             }, _tuple);
         std::apply(
             [&](auto&&... elem) {
                 size_t index = 0;
-                ((elem = reinterpret_cast<typename std::remove_reference<decltype(elem)>::type>(&_data[0] + offsets[index++])), ...);
+                ((elem = reinterpret_cast<typename std::remove_reference<decltype(elem)>::type>(&_data[0] + _fieldOffsets[index++])), ...);
             }
         , _tuple);
     }

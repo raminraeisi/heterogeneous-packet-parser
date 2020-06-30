@@ -21,9 +21,10 @@ namespace fs = std::filesystem;
 
 int main(int argc, char* argv[])
 {
+    argc = 2;
   if (argc == 2)
   {
-      std::string fileName(argv[1]);
+      std::string fileName("C:\\Users\\rr\\Desktop\\CodingTest.bin");
       if (std::filesystem::exists(fileName))
       {
           std::ifstream file(fileName, std::ios::binary | std::ios::ate);
@@ -63,7 +64,7 @@ int main(int argc, char* argv[])
                       buffer[0] = packetType;
                       file.read(&buffer[1], packet->length() - 1);
 
-                      packet->updateFromMemory(&buffer[0]);
+                      packet->updateFromMemory(reinterpret_cast<uint8_t*>(&buffer[0]));
 
                       file >> packetType;
                   }
