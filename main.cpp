@@ -21,10 +21,9 @@ namespace fs = std::filesystem;
 
 int main(int argc, char* argv[])
 {
-    argc = 2;
   if (argc == 2)
   {
-      std::string fileName("C:\\Users\\rr\\Desktop\\CodingTest.bin");
+      std::string fileName(argv[1]);
       if (std::filesystem::exists(fileName))
       {
           std::ifstream file(fileName, std::ios::binary | std::ios::ate);
