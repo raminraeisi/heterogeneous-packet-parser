@@ -42,4 +42,3 @@ namespace cdp {
 	} // namespace packet
 } // namespace cdp
 #endif
-

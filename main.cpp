@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 		if (std::filesystem::exists(fileName))
 		{
 			std::ifstream file(fileName, std::ios::binary | std::ios::ate);
-			cdp::packet::StreamPacketParser packetParser(file);
+			cdp::packet::StreamPacketParser packetParser(file, std::cout);
 			packetParser.parse();
 		}
 		else {

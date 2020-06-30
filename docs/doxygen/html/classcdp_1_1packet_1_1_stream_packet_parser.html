@@ -80,9 +80,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af8839bd8ef857869ed8d5f9760ea7b79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_stream_packet_parser.html#af8839bd8ef857869ed8d5f9760ea7b79">StreamPacketParser</a> (std::istream &amp;stream)</td></tr>
-<tr class="memdesc:af8839bd8ef857869ed8d5f9760ea7b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classcdp_1_1packet_1_1_stream_packet_parser.html#af8839bd8ef857869ed8d5f9760ea7b79">More...</a><br /></td></tr>
-<tr class="separator:af8839bd8ef857869ed8d5f9760ea7b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493913cbb93d28e130334f10fd76ebb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_stream_packet_parser.html#a493913cbb93d28e130334f10fd76ebb7">StreamPacketParser</a> (std::istream &amp;inputStream, std::ostream &amp;outputStream)</td></tr>
+<tr class="memdesc:a493913cbb93d28e130334f10fd76ebb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classcdp_1_1packet_1_1_stream_packet_parser.html#a493913cbb93d28e130334f10fd76ebb7">More...</a><br /></td></tr>
+<tr class="separator:a493913cbb93d28e130334f10fd76ebb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4afb36b5417d8f70035aef5826c08f7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_stream_packet_parser.html#a4afb36b5417d8f70035aef5826c08f7c">parse</a> ()</td></tr>
 <tr class="memdesc:a4afb36b5417d8f70035aef5826c08f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will be called to parse the stream.  <a href="classcdp_1_1packet_1_1_stream_packet_parser.html#a4afb36b5417d8f70035aef5826c08f7c">More...</a><br /></td></tr>
 <tr class="separator:a4afb36b5417d8f70035aef5826c08f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,8 +92,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_stream_packet_parser_8hpp_source.html#l00014">14</a> of file <a class="el" href="_stream_packet_parser_8hpp_source.html">StreamPacketParser.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af8839bd8ef857869ed8d5f9760ea7b79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8839bd8ef857869ed8d5f9760ea7b79">&#9670;&nbsp;</a></span>StreamPacketParser()</h2>
+<a id="a493913cbb93d28e130334f10fd76ebb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493913cbb93d28e130334f10fd76ebb7">&#9670;&nbsp;</a></span>StreamPacketParser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,8 +105,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">cdp::packet::StreamPacketParser::StreamPacketParser </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td class="paramname"><em>inputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>outputStream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -150,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <p>Iterating over the file and parse packets</p>
 <p>Retrieves the corresponding packet instance from the registry</p>
 
-<p class="definition">Definition at line <a class="el" href="_stream_packet_parser_8hpp_source.html#l00021">21</a> of file <a class="el" href="_stream_packet_parser_8hpp_source.html">StreamPacketParser.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_stream_packet_parser_8hpp_source.html#l00022">22</a> of file <a class="el" href="_stream_packet_parser_8hpp_source.html">StreamPacketParser.hpp</a>.</p>
 
 </div>
 </div>
