@@ -88,7 +88,7 @@ namespace cdp {
 			}
 			std::vector<char> buf(size);
 			snprintf(&buf[0], size, format.c_str(), args ...);
-			return(std::string(buf.begin(), buf.end()));
+			return(std::string(buf.begin(), buf.end() - 1));
 		}
 
 	} // namespace general

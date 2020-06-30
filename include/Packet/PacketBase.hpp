@@ -24,7 +24,7 @@ namespace cdp {
 			/// Reports an error message to the specified output stream
 			void reportErrorLine(std::string_view str) {
 				if (_outputStream)
-					(*_outputStream) << "ERR:<" << str << ">" << std::endl;
+					(*_outputStream) << "ERR:" << str << std::endl;
 			}
 
 			/// Reports a general message to the specified output stream

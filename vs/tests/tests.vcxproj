@@ -39,11 +39,6 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\assessment.vcxproj">
-      <Project>{573e3911-0957-40d8-863d-e3a9c2ef6e9f}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

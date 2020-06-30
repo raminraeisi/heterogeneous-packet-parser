@@ -23,6 +23,7 @@
     <ProjectGuid>{573E3911-0957-40D8-863D-E3A9C2EF6E9F}</ProjectGuid>
     <RootNamespace>assessment</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CodingTest</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -161,9 +162,6 @@
     <ClInclude Include="..\include\Packet\PacketFactory.hpp" />
     <ClInclude Include="..\include\Packet\PacketTemplate.hpp" />
     <ClInclude Include="..\include\Packet\StreamPacketParser.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\docs\class-diagram\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
