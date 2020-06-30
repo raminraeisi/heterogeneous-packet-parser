@@ -55,22 +55,26 @@ namespace cdp {
 
 				if (_endianness != cdp::globals::Endianness::BigEndian)
 					delta = -1;
-
-				for (size_t i = 0; i < _fieldOffsets.size() - 1; ++i) {
-
-					size_t currentFieldLength = _fieldOffsets[i + 1] - _fieldOffsets[i];
-					if (_endianness == cdp::globals::Endianness::LittleEndian) {
-						currentFieldIndex = _fieldOffsets[i + 1] - 1;
+				
+				try {
+					for (size_t i = 0; i < _fieldOffsets.size() - 1; ++i) {
+						size_t currentFieldLength = _fieldOffsets[i + 1] - _fieldOffsets[i];
+						if (_endianness == cdp::globals::Endianness::LittleEndian) {
+							currentFieldIndex = _fieldOffsets[i + 1] - 1;
+						}
+						else {
+							currentFieldIndex = _fieldOffsets[i];
+						}
+						while (currentFieldLength--) {
+							_packetData[packetIndex++] = fromAddress[currentFieldIndex];
+							if (packetIndex < _packetLength)
+								error += fromAddress[currentFieldIndex];
+							currentFieldIndex += delta;
+						}
 					}
-					else {
-						currentFieldIndex = _fieldOffsets[i];
-					}
-					while (currentFieldLength--) {
-						_packetData[packetIndex++] = fromAddress[currentFieldIndex];
-						if (packetIndex < _packetLength)
-							error += fromAddress[currentFieldIndex];
-						currentFieldIndex += delta;
-					}
+				}
+				catch (...) {
+					return(false);
 				}
 				return(error == _packetData[_packetLength - 1]);
 			}
