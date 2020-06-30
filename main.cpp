@@ -10,12 +10,10 @@
  * which you can run to build the project built in release mode
  *
  */
+#include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <Packet/PacketFactory.hpp>
-
-#define PACKET_VOLTAGE_CURRENT 0
-#define PACKET_BATTERY         1
 
 namespace fs = std::filesystem;
 
@@ -34,23 +32,28 @@ int main(int argc, char* argv[])
               auto& packetFactory = cdp::factory::PacketFactory::getInstance();
 
               /// Iterating over the file and parse packets
-              file >> packetType;
-              while (!file.eof()) {
-				  /// Retrieves the corresponding packet instance from the registry
-                  auto packet = packetFactory.GetObject(packetType);
+              try {
+				  file >> packetType;
+				  while (!file.eof()) {
+					  /// Retrieves the corresponding packet instance from the registry
+					  auto packet = packetFactory.GetObject(packetType);
 
-                  if (packet) {
-					  packet->setOutputStream(&std::cout);
-                      std::vector<char> buffer(packet->length());
+					  if (packet) {
+						  packet->setOutputStream(&std::cout);
+						  std::vector<char> buffer(packet->length());
 
-                      buffer[0] = packetType;
-                      file.read(&buffer[1], packet->length() - 1);
+						  buffer[0] = packetType;
 
-                      packet->updateFromMemory(reinterpret_cast<uint8_t*>(&buffer[0]));
+							file.read(&buffer[1], packet->length() - 1);
+							packet->updateFromMemory(reinterpret_cast<uint8_t*>(&buffer[0]));
+							file >> packetType;
 
-                      file >> packetType;
-                  }
-              }
+					  }
+				  }
+		        }
+			  catch (std::ifstream::failure e) {
+				std::cerr << "exception reading the input file";
+			  }
               file.close();
           }
       }
