@@ -33,24 +33,6 @@ int main(int argc, char* argv[])
               uint8_t packetType;
               auto& packetFactory = cdp::factory::PacketFactory::getInstance();
 
-              /// Initializes output stream of the voltage/current packet
-              {
-                  auto packet = packetFactory.GetObject(PACKET_VOLTAGE_CURRENT);
-                  if (packet) {
-                      packet->setOutputStream(&std::cout);
-                  }
-
-              }
-
-              /// Initializes output stream of the battery packet
-              {
-                  auto packet = packetFactory.GetObject(PACKET_BATTERY);
-                  if (packet) {
-                      packet->setOutputStream(&std::cout);
-                  }
-
-              }
-
               /// Iterating over the file and parse packets
               file >> packetType;
               while (!file.eof()) {
@@ -58,6 +40,7 @@ int main(int argc, char* argv[])
                   auto packet = packetFactory.GetObject(packetType);
 
                   if (packet) {
+					  packet->setOutputStream(&std::cout);
                       std::vector<char> buffer(packet->length());
 
                       buffer[0] = packetType;
