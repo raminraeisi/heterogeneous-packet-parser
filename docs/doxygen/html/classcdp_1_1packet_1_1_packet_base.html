@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classcdp_1_1packet_1_1_packet_base-members.html">List of all members</a>  </div>
@@ -89,7 +88,7 @@ Inheritance diagram for cdp::packet::PacketBase:</div>
 <area href="classcdp_1_1packet_1_1_packet_template.html" title=": A template based class which is derived from PacketBase to add the following capabilities 1- Formin..." alt="cdp::packet::PacketTemplate&lt; NewPacket, ID, _First, _Rest &gt;" shape="rect" coords="0,56,645,80"/>
 <area href="classcdp_1_1packet_1_1_packet_template.html" alt="cdp::packet::PacketTemplate&lt; PacketBattery, 1, uint8_t *, uint32_t *, uint8_t *, uint8_t * &gt;" shape="rect" coords="655,56,1300,80"/>
 <area href="classcdp_1_1packet_1_1_packet_template.html" alt="cdp::packet::PacketTemplate&lt; PacketVoltageCurrent, 0, uint8_t *, uint32_t *, uint32_t *, uint64_t *, uint8_t * &gt;" shape="rect" coords="1310,56,1955,80"/>
-<area href="classcdp_1_1packet_1_1_packet_battery.html" title=": A template based class which is derived from PacketBase to add the following capabilities 1- Formin..." alt="cdp::packet::PacketBattery" shape="rect" coords="655,112,1300,136"/>
+<area href="classcdp_1_1packet_1_1_packet_battery.html" title=": Represents the battery packet defined in the provided document, ID = 1" alt="cdp::packet::PacketBattery" shape="rect" coords="655,112,1300,136"/>
 <area href="classcdp_1_1packet_1_1_packet_voltage_current.html" title=": Represents the voltage/current packet defined in the provided document, ID = 0" alt="cdp::packet::PacketVoltageCurrent" shape="rect" coords="1310,112,1955,136"/>
   </map>
 </div></div>
@@ -110,14 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a379e4f6e9b0a560d97c285407bbbfaa3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a379e4f6e9b0a560d97c285407bbbfaa3">length</a> ()</td></tr>
 <tr class="memdesc:a379e4f6e9b0a560d97c285407bbbfaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the packet.  <a href="classcdp_1_1packet_1_1_packet_base.html#a379e4f6e9b0a560d97c285407bbbfaa3">More...</a><br /></td></tr>
 <tr class="separator:a379e4f6e9b0a560d97c285407bbbfaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fde67ab769415e5885a94f6c923eb0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a83fde67ab769415e5885a94f6c923eb0">updateFromMemory</a> (void *fromAddress)</td></tr>
-<tr class="separator:a83fde67ab769415e5885a94f6c923eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:adbee4e67d39af7d7d937cefcd7783efe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#adbee4e67d39af7d7d937cefcd7783efe">hasError</a> ()</td></tr>
-<tr class="memdesc:adbee4e67d39af7d7d937cefcd7783efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks correctness of the Error Check Byte.  <a href="classcdp_1_1packet_1_1_packet_base.html#adbee4e67d39af7d7d937cefcd7783efe">More...</a><br /></td></tr>
-<tr class="separator:adbee4e67d39af7d7d937cefcd7783efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e2dcf38c1adf4be3aaf296bce0e50c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#aa6e2dcf38c1adf4be3aaf296bce0e50c">updateFromMemory</a> (uint8_t *fromAddress)</td></tr>
+<tr class="separator:aa6e2dcf38c1adf4be3aaf296bce0e50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -127,6 +120,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1d51b4ac1762057ad5714c6cd3dfd643"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a1d51b4ac1762057ad5714c6cd3dfd643">_packetLength</a></td></tr>
 <tr class="memdesc:a1d51b4ac1762057ad5714c6cd3dfd643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the packet length.  <a href="classcdp_1_1packet_1_1_packet_base.html#a1d51b4ac1762057ad5714c6cd3dfd643">More...</a><br /></td></tr>
 <tr class="separator:a1d51b4ac1762057ad5714c6cd3dfd643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4695e6379ebd40667ceba02537dc09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a1a4695e6379ebd40667ceba02537dc09">_fieldOffsets</a></td></tr>
+<tr class="separator:a1a4695e6379ebd40667ceba02537dc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6093be70461a6d5bcccde984856037"><td class="memItemLeft" align="right" valign="top">std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a4c6093be70461a6d5bcccde984856037">_outputStream</a></td></tr>
 <tr class="memdesc:a4c6093be70461a6d5bcccde984856037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds a pointer to the desired output stream.  <a href="classcdp_1_1packet_1_1_packet_base.html#a4c6093be70461a6d5bcccde984856037">More...</a><br /></td></tr>
 <tr class="separator:a4c6093be70461a6d5bcccde984856037"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +135,7 @@ Static Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Base class of all packets, every new packet type should be derived from this class as the base </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00022">22</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00018">18</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9ce90e34ff10bd748b15cefd46ce0a50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ce90e34ff10bd748b15cefd46ce0a50">&#9670;&nbsp;</a></span>PacketBase()</h2>
@@ -167,40 +162,11 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00025">25</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00021">21</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adbee4e67d39af7d7d937cefcd7783efe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbee4e67d39af7d7d937cefcd7783efe">&#9670;&nbsp;</a></span>hasError()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool cdp::packet::PacketBase::hasError </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks correctness of the Error Check Byte. </p>
-
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00059">59</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a379e4f6e9b0a560d97c285407bbbfaa3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a379e4f6e9b0a560d97c285407bbbfaa3">&#9670;&nbsp;</a></span>length()</h2>
 
@@ -226,7 +192,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Returns the length of the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00047">47</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00043">43</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +222,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reports an error message to the specified output stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00029">29</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00025">25</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +252,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reports a general message to the specified output stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00035">35</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00031">31</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -315,12 +281,12 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the output stream of the class which will be used for the output reporting </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00042">42</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00038">38</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a83fde67ab769415e5885a94f6c923eb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83fde67ab769415e5885a94f6c923eb0">&#9670;&nbsp;</a></span>updateFromMemory()</h2>
+<a id="aa6e2dcf38c1adf4be3aaf296bce0e50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e2dcf38c1adf4be3aaf296bce0e50c">&#9670;&nbsp;</a></span>updateFromMemory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +297,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual bool cdp::packet::PacketBase::updateFromMemory </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>fromAddress</em></td><td>)</td>
           <td></td>
         </tr>
@@ -342,11 +308,11 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Updates the internal packet data using from a provided memory region anbd returns the result if succeeded or not </p>
+<p>Updates the internal packet data using a provided source memory region and returns the result if succeeded or not based on the calculated error and the real error field </p>
 
-<p>Reimplemented in <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#a521e815ad5a64f940bdd01662c783886">cdp::packet::PacketTemplate&lt; NewPacket, ID, _First, _Rest &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#a521e815ad5a64f940bdd01662c783886">cdp::packet::PacketTemplate&lt; PacketVoltageCurrent, 0, uint8_t *, uint32_t *, uint32_t *, uint64_t *, uint8_t * &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#a521e815ad5a64f940bdd01662c783886">cdp::packet::PacketTemplate&lt; PacketBattery, 1, uint8_t *, uint32_t *, uint8_t *, uint8_t * &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_battery.html#a14c0c69a2a18e38382c5093cab0af144">cdp::packet::PacketBattery</a>, and <a class="el" href="classcdp_1_1packet_1_1_packet_voltage_current.html#af31ba8dd4f274115c74368b7f0e21487">cdp::packet::PacketVoltageCurrent</a>.</p>
+<p>Reimplemented in <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#ab8eb566ebc3c6d7c4f56df7416f962e1">cdp::packet::PacketTemplate&lt; NewPacket, ID, _First, _Rest &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#ab8eb566ebc3c6d7c4f56df7416f962e1">cdp::packet::PacketTemplate&lt; PacketVoltageCurrent, 0, uint8_t *, uint32_t *, uint32_t *, uint64_t *, uint8_t * &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_template.html#ab8eb566ebc3c6d7c4f56df7416f962e1">cdp::packet::PacketTemplate&lt; PacketBattery, 1, uint8_t *, uint32_t *, uint8_t *, uint8_t * &gt;</a>, <a class="el" href="classcdp_1_1packet_1_1_packet_battery.html#a9a0ea58a4a840f21c8b47cd8c5016a74">cdp::packet::PacketBattery</a>, and <a class="el" href="classcdp_1_1packet_1_1_packet_voltage_current.html#a966de017ab75d3275ad7126db4bf6a91">cdp::packet::PacketVoltageCurrent</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00053">53</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00050">50</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +339,31 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Holds the memory endianness of the target on which the packet exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00077">77</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00089">89</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1a4695e6379ebd40667ceba02537dc09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4695e6379ebd40667ceba02537dc09">&#9670;&nbsp;</a></span>_fieldOffsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;size_t&gt; cdp::packet::PacketBase::_fieldOffsets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00087">87</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +389,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Holds a pointer to the desired output stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00079">79</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00091">91</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -425,7 +415,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Holds a pointer to the packet data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00073">73</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00083">83</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,12 +441,12 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Holds the packet length. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00075">75</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_base_8hpp_source.html#l00085">85</a> of file <a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/rr/Desktop/CDP/include/Packet/<a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a></li>
+<li>C:/Users/rr/Desktop/CDP - Copy/include/Packet/<a class="el" href="_packet_base_8hpp_source.html">PacketBase.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

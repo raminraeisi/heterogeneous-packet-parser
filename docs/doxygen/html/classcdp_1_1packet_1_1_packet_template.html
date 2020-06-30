@@ -94,9 +94,9 @@ Inheritance diagram for cdp::packet::PacketTemplate&lt; NewPacket, ID, _First, _
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a470fd9c993dff6af2f076dc30708479f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_template.html#a470fd9c993dff6af2f076dc30708479f">PacketTemplate</a> ()</td></tr>
 <tr class="separator:a470fd9c993dff6af2f076dc30708479f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521e815ad5a64f940bdd01662c783886"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_template.html#a521e815ad5a64f940bdd01662c783886">updateFromMemory</a> (void *fromAddress) override</td></tr>
-<tr class="memdesc:a521e815ad5a64f940bdd01662c783886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the internal packet data from an external memry region.  <a href="classcdp_1_1packet_1_1_packet_template.html#a521e815ad5a64f940bdd01662c783886">More...</a><br /></td></tr>
-<tr class="separator:a521e815ad5a64f940bdd01662c783886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8eb566ebc3c6d7c4f56df7416f962e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_template.html#ab8eb566ebc3c6d7c4f56df7416f962e1">updateFromMemory</a> (uint8_t *fromAddress) override</td></tr>
+<tr class="memdesc:ab8eb566ebc3c6d7c4f56df7416f962e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the internal packet data from an external memry region.  <a href="classcdp_1_1packet_1_1_packet_template.html#ab8eb566ebc3c6d7c4f56df7416f962e1">More...</a><br /></td></tr>
+<tr class="separator:ab8eb566ebc3c6d7c4f56df7416f962e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcdp_1_1packet_1_1_packet_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcdp_1_1packet_1_1_packet_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcdp_1_1packet_1_1_packet_base.html">cdp::packet::PacketBase</a></td></tr>
 <tr class="memitem:a9ce90e34ff10bd748b15cefd46ce0a50 inherit pub_methods_classcdp_1_1packet_1_1_packet_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a9ce90e34ff10bd748b15cefd46ce0a50">PacketBase</a> ()</td></tr>
 <tr class="memdesc:a9ce90e34ff10bd748b15cefd46ce0a50 inherit pub_methods_classcdp_1_1packet_1_1_packet_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classcdp_1_1packet_1_1_packet_base.html#a9ce90e34ff10bd748b15cefd46ce0a50">More...</a><br /></td></tr>
@@ -131,6 +131,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1d51b4ac1762057ad5714c6cd3dfd643 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a1d51b4ac1762057ad5714c6cd3dfd643">_packetLength</a></td></tr>
 <tr class="memdesc:a1d51b4ac1762057ad5714c6cd3dfd643 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the packet length.  <a href="classcdp_1_1packet_1_1_packet_base.html#a1d51b4ac1762057ad5714c6cd3dfd643">More...</a><br /></td></tr>
 <tr class="separator:a1d51b4ac1762057ad5714c6cd3dfd643 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4695e6379ebd40667ceba02537dc09 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a1a4695e6379ebd40667ceba02537dc09">_fieldOffsets</a></td></tr>
+<tr class="separator:a1a4695e6379ebd40667ceba02537dc09 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6093be70461a6d5bcccde984856037 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memItemLeft" align="right" valign="top">std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a4c6093be70461a6d5bcccde984856037">_outputStream</a></td></tr>
 <tr class="memdesc:a4c6093be70461a6d5bcccde984856037 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds a pointer to the desired output stream.  <a href="classcdp_1_1packet_1_1_packet_base.html#a4c6093be70461a6d5bcccde984856037">More...</a><br /></td></tr>
 <tr class="separator:a4c6093be70461a6d5bcccde984856037 inherit pro_attribs_classcdp_1_1packet_1_1_packet_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,10 +152,6 @@ Static Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classcdp_1_1packet_1_1_packet_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcdp_1_1packet_1_1_packet_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcdp_1_1packet_1_1_packet_base.html">cdp::packet::PacketBase</a></td></tr>
-<tr class="memitem:adbee4e67d39af7d7d937cefcd7783efe inherit pro_methods_classcdp_1_1packet_1_1_packet_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1packet_1_1_packet_base.html#adbee4e67d39af7d7d937cefcd7783efe">hasError</a> ()</td></tr>
-<tr class="memdesc:adbee4e67d39af7d7d937cefcd7783efe inherit pro_methods_classcdp_1_1packet_1_1_packet_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks correctness of the Error Check Byte.  <a href="classcdp_1_1packet_1_1_packet_base.html#adbee4e67d39af7d7d937cefcd7783efe">More...</a><br /></td></tr>
-<tr class="separator:adbee4e67d39af7d7d937cefcd7783efe inherit pro_methods_classcdp_1_1packet_1_1_packet_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classcdp_1_1factory_1_1_factory_registrar"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classcdp_1_1factory_1_1_factory_registrar')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classcdp_1_1factory_1_1_factory_registrar.html">cdp::factory::FactoryRegistrar&lt; cdp::packet::PacketBase, NewPacket, cdp::factory::PacketFactory, ID &gt;</a></td></tr>
 <tr class="memitem:a5dccc25be3e08e67709635bc918c48bc inherit pro_static_methods_classcdp_1_1factory_1_1_factory_registrar"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcdp_1_1packet_1_1_packet_base.html">cdp::packet::PacketBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">CreateInstance</a> ()</td></tr>
 <tr class="separator:a5dccc25be3e08e67709635bc918c48bc inherit pro_static_methods_classcdp_1_1factory_1_1_factory_registrar"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,8 +204,8 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a521e815ad5a64f940bdd01662c783886"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a521e815ad5a64f940bdd01662c783886">&#9670;&nbsp;</a></span>updateFromMemory()</h2>
+<a id="ab8eb566ebc3c6d7c4f56df7416f962e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8eb566ebc3c6d7c4f56df7416f962e1">&#9670;&nbsp;</a></span>updateFromMemory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +218,7 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
         <tr>
           <td class="memname">virtual bool <a class="el" href="classcdp_1_1packet_1_1_packet_template.html">cdp::packet::PacketTemplate</a>&lt; NewPacket, ID, _First, _Rest &gt;::updateFromMemory </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>fromAddress</em></td><td>)</td>
           <td></td>
         </tr>
@@ -233,11 +231,10 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 </div><div class="memdoc">
 
 <p>Updates the internal packet data from an external memry region. </p>
-<p>Will check the target endianness and correct the byte order of fields in RAM if needed</p>
 
-<p>Reimplemented from <a class="el" href="classcdp_1_1packet_1_1_packet_base.html#a83fde67ab769415e5885a94f6c923eb0">cdp::packet::PacketBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classcdp_1_1packet_1_1_packet_base.html#aa6e2dcf38c1adf4be3aaf296bce0e50c">cdp::packet::PacketBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classcdp_1_1packet_1_1_packet_battery.html#a14c0c69a2a18e38382c5093cab0af144">cdp::packet::PacketBattery</a>, and <a class="el" href="classcdp_1_1packet_1_1_packet_voltage_current.html#af31ba8dd4f274115c74368b7f0e21487">cdp::packet::PacketVoltageCurrent</a>.</p>
+<p>Reimplemented in <a class="el" href="classcdp_1_1packet_1_1_packet_battery.html#a9a0ea58a4a840f21c8b47cd8c5016a74">cdp::packet::PacketBattery</a>, and <a class="el" href="classcdp_1_1packet_1_1_packet_voltage_current.html#a966de017ab75d3275ad7126db4bf6a91">cdp::packet::PacketVoltageCurrent</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00047">47</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
 
@@ -268,7 +265,7 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 
 <p>Internal representation of the packet data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00076">76</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00065">65</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
 
 </div>
 </div>
@@ -296,7 +293,7 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 
 <p>Holds the delta time between voltage/current packets. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00082">82</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00071">71</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +321,7 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 
 <p>The tuple which stores the pointers to the fields in the packet buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00079">79</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00068">68</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
 
 </div>
 </div>
@@ -352,12 +349,12 @@ template&lt;class NewPacket , cdp::globals::PacketIDType ID, class _First , clas
 
 <p>Automatically calculates the packet length by sum of the tuple element sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00073">73</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_packet_template_8hpp_source.html#l00062">62</a> of file <a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/rr/Desktop/CDP/include/Packet/<a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a></li>
+<li>C:/Users/rr/Desktop/CDP - Copy/include/Packet/<a class="el" href="_packet_template_8hpp_source.html">PacketTemplate.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

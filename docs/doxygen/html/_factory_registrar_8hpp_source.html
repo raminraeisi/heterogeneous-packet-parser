@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CDP: C:/Users/rr/Desktop/CDP/include/Factory/FactoryRegistrar.hpp Source File</title>
+<title>CDP: C:/Users/rr/Desktop/CDP - Copy/include/Factory/FactoryRegistrar.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,20 +78,20 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecdp.html">cdp</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">namespace </span>factory {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//template&lt;class Interface, class Derived, class Factory, cdp::PacketIDType ID&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Interface, <span class="keyword">class</span> Derived, <span class="keyword">class</span> Factory, cdp::globals::PacketIDType ID&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html">FactoryRegistrar</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">   28</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">_registered</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <span class="comment">//template&lt;class Interface, class Derived, class Factory, cdp::PacketIDType ID&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> Interface, <span class="keyword">class</span> Derived, <span class="keyword">class</span> Factory, cdp::globals::PacketIDType ID&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html">   24</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html">FactoryRegistrar</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">   28</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">_registered</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">   33</a></span>&#160;    <span class="keyword">static</span> Interface* <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">CreateInstance</a>() {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">new</span> Derived();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">   33</a></span>&#160;            <span class="keyword">static</span> Interface* <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">CreateInstance</a>() {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> Derived();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        };</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Derived, <span class="keyword">class</span> Factory, cdp::globals::PacketIDType ID&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">FactoryRegistrar&lt;Base, Derived, Factory, ID&gt;::_registered</a> =</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="classcdp_1_1factory_1_1_factory.html#a114c89aa32a1278255cf26b8c14320e9">Factory::Register</a>(ID, <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">FactoryRegistrar::CreateInstance</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Derived, <span class="keyword">class</span> Factory, cdp::globals::PacketIDType ID&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a4eae2737208f1f8a3e67845114146118">FactoryRegistrar&lt;Base, Derived, Factory, ID&gt;::_registered</a> =</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classcdp_1_1factory_1_1_factory.html#a114c89aa32a1278255cf26b8c14320e9">Factory::Register</a>(ID, <a class="code" href="classcdp_1_1factory_1_1_factory_registrar.html#a5dccc25be3e08e67709635bc918c48bc">FactoryRegistrar::CreateInstance</a>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    } <span class="comment">// namespace factory</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <span class="comment">// namespace cdp</span></div>

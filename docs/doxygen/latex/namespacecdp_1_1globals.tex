@@ -24,13 +24,11 @@ enum \mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604e}
 \begin{DoxyCompactList}\small\item\em Function for retrieving the target endianness. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename ... Args$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacecdp_1_1globals_a2f7b79354421c78d96033a99fe863069}{size\+Of\+Tuple\+Elements}} (std\+::tuple$<$ Args... $>$ const \&)
 \begin{DoxyCompactList}\small\item\em Calculates sum of size of a tuple elements. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecdp_1_1globals_a4962de5a696e1f89720137914caa7c06}{swap\+Endian}} (T u)
-\begin{DoxyCompactList}\small\item\em Inverts the endianness of a numeric variable of type T. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Op , typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_acc1a18fb564a31c449475fe4ee134db8}{fold\+Operation}} (Op \&\&op, T1 arg1, T2 arg2)
 \begin{DoxyCompactList}\small\item\em Template function which perform an operation on two variables with possible different types. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Op , typename T , typename ... Ts$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a301dd7f5b5fb4d0200ef64e2f26de579}{fold\+Operation}} (Op \&\&op, T head, Ts ... rest)
 \item 
-{\footnotesize template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a5304bb6e36c74c78fb51532cf4f49a42}{find\+Range\+Helper}} (const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&ranges, Operator \&\&op, T\+First first, T\+Rest ... rest)
+{\footnotesize template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ }\\size\+\_\+t \mbox{\hyperlink{namespacecdp_1_1globals_a0db9efabde28494d4d65739d82aacb3c}{find\+Range\+Helper}} (const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&ranges, Operator \&\&op, T\+First first, T\+Rest ... rest)
 \item 
 {\footnotesize template$<$typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespacecdp_1_1globals_a500a03cc6c19d1fd5575e74aac8e361c}{string\+Format}} (const std\+::string \&format, Args ... args)
 \end{DoxyCompactItemize}
@@ -81,16 +79,16 @@ Definition at line 27 of file Globals.\+hpp.
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacecdp_1_1globals_a5304bb6e36c74c78fb51532cf4f49a42}\label{namespacecdp_1_1globals_a5304bb6e36c74c78fb51532cf4f49a42}} 
+\mbox{\Hypertarget{namespacecdp_1_1globals_a0db9efabde28494d4d65739d82aacb3c}\label{namespacecdp_1_1globals_a0db9efabde28494d4d65739d82aacb3c}} 
 \index{cdp::globals@{cdp::globals}!findRangeHelper@{findRangeHelper}}
 \index{findRangeHelper@{findRangeHelper}!cdp::globals@{cdp::globals}}
 \doxysubsubsection{\texorpdfstring{findRangeHelper()}{findRangeHelper()}}
 {\footnotesize\ttfamily template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ \\
-auto cdp\+::globals\+::find\+Range\+Helper (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&}]{ranges,  }\item[{Operator \&\&}]{op,  }\item[{T\+First}]{first,  }\item[{T\+Rest ...}]{rest }\end{DoxyParamCaption})}
+size\+\_\+t cdp\+::globals\+::find\+Range\+Helper (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&}]{ranges,  }\item[{Operator \&\&}]{op,  }\item[{T\+First}]{first,  }\item[{T\+Rest ...}]{rest }\end{DoxyParamCaption})}
 
 
 
-Definition at line 85 of file Globals.\+hpp.
+Definition at line 72 of file Globals.\+hpp.
 
 \mbox{\Hypertarget{namespacecdp_1_1globals_a301dd7f5b5fb4d0200ef64e2f26de579}\label{namespacecdp_1_1globals_a301dd7f5b5fb4d0200ef64e2f26de579}} 
 \index{cdp::globals@{cdp::globals}!foldOperation@{foldOperation}}
@@ -102,7 +100,7 @@ auto cdp\+::globals\+::fold\+Operation (\begin{DoxyParamCaption}\item[{Op \&\&}]
 Template function which perform an operation on multiple variables with possible different types using fold expressions ~\newline
  
 
-Definition at line 79 of file Globals.\+hpp.
+Definition at line 66 of file Globals.\+hpp.
 
 \mbox{\Hypertarget{namespacecdp_1_1globals_acc1a18fb564a31c449475fe4ee134db8}\label{namespacecdp_1_1globals_acc1a18fb564a31c449475fe4ee134db8}} 
 \index{cdp::globals@{cdp::globals}!foldOperation@{foldOperation}}
@@ -117,13 +115,13 @@ Template function which perform an operation on two variables with possible diff
 
 
 
-Definition at line 71 of file Globals.\+hpp.
+Definition at line 58 of file Globals.\+hpp.
 
 \mbox{\Hypertarget{namespacecdp_1_1globals_a8c145cdfba551a974065f5dad577baed}\label{namespacecdp_1_1globals_a8c145cdfba551a974065f5dad577baed}} 
 \index{cdp::globals@{cdp::globals}!getEndianness@{getEndianness}}
 \index{getEndianness@{getEndianness}!cdp::globals@{cdp::globals}}
 \doxysubsubsection{\texorpdfstring{getEndianness()}{getEndianness()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604e}{Endianness}} cdp\+::globals\+::get\+Endianness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecdp_1_1globals_a7abd44d1f0ffc950914e5f34c86b604e}{Endianness}} cdp\+::globals\+::get\+Endianness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -131,7 +129,7 @@ Function for retrieving the target endianness.
 
 
 
-Definition at line 6 of file Globals.\+cpp.
+Definition at line 30 of file Globals.\+hpp.
 
 \mbox{\Hypertarget{namespacecdp_1_1globals_a2f7b79354421c78d96033a99fe863069}\label{namespacecdp_1_1globals_a2f7b79354421c78d96033a99fe863069}} 
 \index{cdp::globals@{cdp::globals}!sizeOfTupleElements@{sizeOfTupleElements}}
@@ -146,7 +144,7 @@ Calculates sum of size of a tuple elements.
 
 
 
-Definition at line 45 of file Globals.\+hpp.
+Definition at line 52 of file Globals.\+hpp.
 
 \mbox{\Hypertarget{namespacecdp_1_1globals_a500a03cc6c19d1fd5575e74aac8e361c}\label{namespacecdp_1_1globals_a500a03cc6c19d1fd5575e74aac8e361c}} 
 \index{cdp::globals@{cdp::globals}!stringFormat@{stringFormat}}
@@ -157,20 +155,5 @@ std\+::string cdp\+::globals\+::string\+Format (\begin{DoxyParamCaption}\item[{c
 
 
 
-Definition at line 96 of file Globals.\+hpp.
-
-\mbox{\Hypertarget{namespacecdp_1_1globals_a4962de5a696e1f89720137914caa7c06}\label{namespacecdp_1_1globals_a4962de5a696e1f89720137914caa7c06}} 
-\index{cdp::globals@{cdp::globals}!swapEndian@{swapEndian}}
-\index{swapEndian@{swapEndian}!cdp::globals@{cdp::globals}}
-\doxysubsubsection{\texorpdfstring{swapEndian()}{swapEndian()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-T cdp\+::globals\+::swap\+Endian (\begin{DoxyParamCaption}\item[{T}]{u }\end{DoxyParamCaption})}
-
-
-
-Inverts the endianness of a numeric variable of type T. 
-
-
-
-Definition at line 51 of file Globals.\+hpp.
+Definition at line 83 of file Globals.\+hpp.
 

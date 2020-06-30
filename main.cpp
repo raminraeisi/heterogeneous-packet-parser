@@ -13,7 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <Packet/PacketFactory.hpp>
+#include <Packet/StreamPacketParser.hpp>
 
 namespace fs = std::filesystem;
 
@@ -25,37 +25,8 @@ int main(int argc, char* argv[])
 		if (std::filesystem::exists(fileName))
 		{
 			std::ifstream file(fileName, std::ios::binary | std::ios::ate);
-			if (file.tellg()) {
-				file.seekg(0, std::ios::beg);
-
-				uint8_t packetType;
-				auto& packetFactory = cdp::factory::PacketFactory::getInstance();
-
-				/// Iterating over the file and parse packets
-				try {
-					file >> packetType;
-					while (!file.eof()) {
-						/// Retrieves the corresponding packet instance from the registry
-						auto packet = packetFactory.GetObject(packetType);
-
-						if (packet) {
-							packet->setOutputStream(&std::cout);
-							std::vector<char> buffer(packet->length());
-
-							buffer[0] = packetType;
-
-							file.read(&buffer[1], packet->length() - 1);
-							packet->updateFromMemory(reinterpret_cast<uint8_t*>(&buffer[0]));
-							file >> packetType;
-
-						}
-					}
-				}
-				catch (std::ifstream::failure e) {
-					std::cerr << "exception reading the input file";
-				}
-				file.close();
-			}
+			cdp::packet::StreamPacketParser packetParser(file);
+			packetParser.parse();
 		}
 		else {
 			std::cout << "Input file not found" << std::endl;
@@ -64,5 +35,5 @@ int main(int argc, char* argv[])
 	else {
 		std::cout << "No input file is provided" << std::endl;
 	}
-	return 0;
+	return(0);
 }

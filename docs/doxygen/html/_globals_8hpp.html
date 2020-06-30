@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CDP: C:/Users/rr/Desktop/CDP/include/Globals.hpp File Reference</title>
+<title>CDP: C:/Users/rr/Desktop/CDP - Copy/include/Globals.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -125,10 +125,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f7b79354421c78d96033a99fe863069"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a2f7b79354421c78d96033a99fe863069">cdp::globals::sizeOfTupleElements</a> (std::tuple&lt; Args... &gt; const &amp;)</td></tr>
 <tr class="memdesc:a2f7b79354421c78d96033a99fe863069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates sum of size of a tuple elements.  <a href="namespacecdp_1_1globals.html#a2f7b79354421c78d96033a99fe863069">More...</a><br /></td></tr>
 <tr class="separator:a2f7b79354421c78d96033a99fe863069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4962de5a696e1f89720137914caa7c06"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4962de5a696e1f89720137914caa7c06"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a4962de5a696e1f89720137914caa7c06">cdp::globals::swapEndian</a> (T u)</td></tr>
-<tr class="memdesc:a4962de5a696e1f89720137914caa7c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the endianness of a numeric variable of type T.  <a href="namespacecdp_1_1globals.html#a4962de5a696e1f89720137914caa7c06">More...</a><br /></td></tr>
-<tr class="separator:a4962de5a696e1f89720137914caa7c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1a18fb564a31c449475fe4ee134db8"><td class="memTemplParams" colspan="2">template&lt;typename Op , typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:acc1a18fb564a31c449475fe4ee134db8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#acc1a18fb564a31c449475fe4ee134db8">cdp::globals::foldOperation</a> (Op &amp;&amp;op, T1 arg1, T2 arg2)</td></tr>
 <tr class="memdesc:acc1a18fb564a31c449475fe4ee134db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function which perform an operation on two variables with possible different types.  <a href="namespacecdp_1_1globals.html#acc1a18fb564a31c449475fe4ee134db8">More...</a><br /></td></tr>
@@ -136,9 +132,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a301dd7f5b5fb4d0200ef64e2f26de579"><td class="memTemplParams" colspan="2">template&lt;typename Op , typename T , typename ... Ts&gt; </td></tr>
 <tr class="memitem:a301dd7f5b5fb4d0200ef64e2f26de579"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a301dd7f5b5fb4d0200ef64e2f26de579">cdp::globals::foldOperation</a> (Op &amp;&amp;op, T head, Ts ... rest)</td></tr>
 <tr class="separator:a301dd7f5b5fb4d0200ef64e2f26de579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5304bb6e36c74c78fb51532cf4f49a42"><td class="memTemplParams" colspan="2">template&lt;typename RangesType , typename Operator , typename TFirst , typename ... TRest&gt; </td></tr>
-<tr class="memitem:a5304bb6e36c74c78fb51532cf4f49a42"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a5304bb6e36c74c78fb51532cf4f49a42">cdp::globals::findRangeHelper</a> (const std::vector&lt; std::pair&lt; RangesType, RangesType &gt;&gt; &amp;ranges, Operator &amp;&amp;op, TFirst first, TRest ... rest)</td></tr>
-<tr class="separator:a5304bb6e36c74c78fb51532cf4f49a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db9efabde28494d4d65739d82aacb3c"><td class="memTemplParams" colspan="2">template&lt;typename RangesType , typename Operator , typename TFirst , typename ... TRest&gt; </td></tr>
+<tr class="memitem:a0db9efabde28494d4d65739d82aacb3c"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a0db9efabde28494d4d65739d82aacb3c">cdp::globals::findRangeHelper</a> (const std::vector&lt; std::pair&lt; RangesType, RangesType &gt;&gt; &amp;ranges, Operator &amp;&amp;op, TFirst first, TRest ... rest)</td></tr>
+<tr class="separator:a0db9efabde28494d4d65739d82aacb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a500a03cc6c19d1fd5575e74aac8e361c"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
 <tr class="memitem:a500a03cc6c19d1fd5575e74aac8e361c"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecdp_1_1globals.html#a500a03cc6c19d1fd5575e74aac8e361c">cdp::globals::stringFormat</a> (const std::string &amp;format, Args ... args)</td></tr>
 <tr class="separator:a500a03cc6c19d1fd5575e74aac8e361c"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,5 +1,5 @@
-\hypertarget{_globals_8hpp}{}\doxysection{C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Globals.hpp File Reference}
-\label{_globals_8hpp}\index{C:/Users/rr/Desktop/CDP/include/Globals.hpp@{C:/Users/rr/Desktop/CDP/include/Globals.hpp}}
+\hypertarget{_globals_8hpp}{}\doxysection{C\+:/\+Users/rr/\+Desktop/\+C\+DP -\/ Copy/include/\+Globals.hpp File Reference}
+\label{_globals_8hpp}\index{C:/Users/rr/Desktop/CDP -\/ Copy/include/Globals.hpp@{C:/Users/rr/Desktop/CDP -\/ Copy/include/Globals.hpp}}
 {\ttfamily \#include $<$cstdint$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
@@ -41,13 +41,11 @@ Endianness \mbox{\hyperlink{namespacecdp_1_1globals_a8c145cdfba551a974065f5dad57
 \begin{DoxyCompactList}\small\item\em Function for retrieving the target endianness. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename ... Args$>$ }\\constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacecdp_1_1globals_a2f7b79354421c78d96033a99fe863069}{cdp\+::globals\+::size\+Of\+Tuple\+Elements}} (std\+::tuple$<$ Args... $>$ const \&)
 \begin{DoxyCompactList}\small\item\em Calculates sum of size of a tuple elements. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecdp_1_1globals_a4962de5a696e1f89720137914caa7c06}{cdp\+::globals\+::swap\+Endian}} (T u)
-\begin{DoxyCompactList}\small\item\em Inverts the endianness of a numeric variable of type T. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Op , typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_acc1a18fb564a31c449475fe4ee134db8}{cdp\+::globals\+::fold\+Operation}} (Op \&\&op, T1 arg1, T2 arg2)
 \begin{DoxyCompactList}\small\item\em Template function which perform an operation on two variables with possible different types. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Op , typename T , typename ... Ts$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a301dd7f5b5fb4d0200ef64e2f26de579}{cdp\+::globals\+::fold\+Operation}} (Op \&\&op, T head, Ts ... rest)
 \item 
-{\footnotesize template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ }\\auto \mbox{\hyperlink{namespacecdp_1_1globals_a5304bb6e36c74c78fb51532cf4f49a42}{cdp\+::globals\+::find\+Range\+Helper}} (const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&ranges, Operator \&\&op, T\+First first, T\+Rest ... rest)
+{\footnotesize template$<$typename Ranges\+Type , typename Operator , typename T\+First , typename ... T\+Rest$>$ }\\size\+\_\+t \mbox{\hyperlink{namespacecdp_1_1globals_a0db9efabde28494d4d65739d82aacb3c}{cdp\+::globals\+::find\+Range\+Helper}} (const std\+::vector$<$ std\+::pair$<$ Ranges\+Type, Ranges\+Type $>$$>$ \&ranges, Operator \&\&op, T\+First first, T\+Rest ... rest)
 \item 
 {\footnotesize template$<$typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespacecdp_1_1globals_a500a03cc6c19d1fd5575e74aac8e361c}{cdp\+::globals\+::string\+Format}} (const std\+::string \&format, Args ... args)
 \end{DoxyCompactItemize}

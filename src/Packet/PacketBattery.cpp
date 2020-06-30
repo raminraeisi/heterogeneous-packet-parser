@@ -7,18 +7,7 @@ namespace cdp {
 	namespace packet {
 
 		/**
-		* @brief: A template based class which is derived from PacketBase to add the
-		* following capabilities
-		* 1- Forming the internal packet structure using std::tuple
-		* 2- Auto registration of the derived packet classes in the PacketFactory
-		* 3- Auto correcting the endianness
-		* Actually we have an internal buffer holding whole data of the packet and the
-		* tuple will be holding the typed pointers to the fileds in the buffer
-
-		* @tparam NewPacket refers to the new packet class to be defined
-		* @tparam ID desired new packet ID
-		* @tparam _First Pointer type to the first field of the packet
-		* @tparam _Rest... Pointer type to the rest fields of the packet
+		* @brief: Represents the battery packet defined in the provided document, ID = 1
 		*/
 		class PacketBattery : public cdp::packet::PacketTemplate<PacketBattery, 1, uint8_t*, uint32_t*, uint8_t*, uint8_t*> {
 			using PacketTemplate::PacketTemplate;

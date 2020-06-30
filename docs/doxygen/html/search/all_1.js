@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['assessment_2evcxproj_2efilelistabsolute_2etxt_9',['assessment.vcxproj.FileListAbsolute.txt',['../_debug_2assessment_8vcxproj_8_file_list_absolute_8txt.html',1,'(Global Namespace)'],['../_release_2assessment_8vcxproj_8_file_list_absolute_8txt.html',1,'(Global Namespace)']]]
+  ['bigendian_10',['BigEndian',['../namespacecdp_1_1globals.html#a7abd44d1f0ffc950914e5f34c86b604ea2ce7a92ae43763828ac4acb4560c2a5b',1,'cdp::globals']]]
 ];

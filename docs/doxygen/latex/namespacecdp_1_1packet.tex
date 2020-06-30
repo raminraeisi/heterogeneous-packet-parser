@@ -6,8 +6,10 @@
 class \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}}
 \begin{DoxyCompactList}\small\item\em \+: Base class of all packets, every new packet type should be derived from this class as the base \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_battery}{Packet\+Battery}}
-\begin{DoxyCompactList}\small\item\em \+: A template based class which is derived from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the Packet\+Factory 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \+: Represents the battery packet defined in the provided document, ID = 1 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template}{Packet\+Template}}
 \begin{DoxyCompactList}\small\item\em \+: A template based class which is derived from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base}{Packet\+Base}} to add the following capabilities 1-\/ Forming the internal packet structure using std\+::tuple 2-\/ Auto registration of the derived packet classes in the Packet\+Factory 3-\/ Auto correcting the endianness Actually we have an internal buffer holding whole data of the packet and the tuple will be holding the typed pointers to the fileds in the buffer \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_voltage_current}{Packet\+Voltage\+Current}}
-\begin{DoxyCompactList}\small\item\em \+: Represents the voltage/current packet defined in the provided document, ID = 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \+: Represents the voltage/current packet defined in the provided document, ID = 0 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcdp_1_1packet_1_1_stream_packet_parser}{Stream\+Packet\+Parser}}
+\begin{DoxyCompactList}\small\item\em \+: It is a class which will be parsing a stream of packets. It gets an argument of type std\+::istream and will walk through the stream and look for the packets to parse \end{DoxyCompactList}\end{DoxyCompactItemize}

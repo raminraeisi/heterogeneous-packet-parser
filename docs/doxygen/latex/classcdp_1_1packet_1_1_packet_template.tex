@@ -20,7 +20,7 @@ Inheritance diagram for cdp\+::packet\+::Packet\+Template$<$ New\+Packet, ID, \+
 \item 
 \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template_a470fd9c993dff6af2f076dc30708479f}{Packet\+Template}} ()
 \item 
-virtual bool \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template_a521e815ad5a64f940bdd01662c783886}{update\+From\+Memory}} (void $\ast$from\+Address) override
+virtual bool \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template_ab8eb566ebc3c6d7c4f56df7416f962e1}{update\+From\+Memory}} (uint8\+\_\+t $\ast$from\+Address) override
 \begin{DoxyCompactList}\small\item\em Updates the internal packet data from an external memry region. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -77,24 +77,24 @@ Definition at line 39 of file Packet\+Template.\+hpp.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_template_a521e815ad5a64f940bdd01662c783886}\label{classcdp_1_1packet_1_1_packet_template_a521e815ad5a64f940bdd01662c783886}} 
+\mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_template_ab8eb566ebc3c6d7c4f56df7416f962e1}\label{classcdp_1_1packet_1_1_packet_template_ab8eb566ebc3c6d7c4f56df7416f962e1}} 
 \index{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!updateFromMemory@{updateFromMemory}}
 \index{updateFromMemory@{updateFromMemory}!cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}}
 \doxysubsubsection{\texorpdfstring{updateFromMemory()}{updateFromMemory()}}
 {\footnotesize\ttfamily template$<$class New\+Packet , cdp\+::globals\+::\+Packet\+I\+D\+Type ID, class \+\_\+\+First , class ... \+\_\+\+Rest$>$ \\
-virtual bool \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template}{cdp\+::packet\+::\+Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::update\+From\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{from\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+virtual bool \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_template}{cdp\+::packet\+::\+Packet\+Template}}$<$ New\+Packet, ID, \+\_\+\+First, \+\_\+\+Rest $>$\+::update\+From\+Memory (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{from\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Updates the internal packet data from an external memry region. 
 
-Will check the target endianness and correct the byte order of fields in R\+AM if needed
-
-Reimplemented from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base_a83fde67ab769415e5885a94f6c923eb0}{cdp\+::packet\+::\+Packet\+Base}}.
 
 
+Reimplemented from \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_base_aa6e2dcf38c1adf4be3aaf296bce0e50c}{cdp\+::packet\+::\+Packet\+Base}}.
 
-Reimplemented in \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_battery_a14c0c69a2a18e38382c5093cab0af144}{cdp\+::packet\+::\+Packet\+Battery}}, and \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_voltage_current_af31ba8dd4f274115c74368b7f0e21487}{cdp\+::packet\+::\+Packet\+Voltage\+Current}}.
+
+
+Reimplemented in \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_battery_a9a0ea58a4a840f21c8b47cd8c5016a74}{cdp\+::packet\+::\+Packet\+Battery}}, and \mbox{\hyperlink{classcdp_1_1packet_1_1_packet_voltage_current_a966de017ab75d3275ad7126db4bf6a91}{cdp\+::packet\+::\+Packet\+Voltage\+Current}}.
 
 
 
@@ -116,7 +116,7 @@ Internal representation of the packet data.
 
 
 
-Definition at line 76 of file Packet\+Template.\+hpp.
+Definition at line 65 of file Packet\+Template.\+hpp.
 
 \mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_template_afa91823a3af8f457e0c021f70db98bad}\label{classcdp_1_1packet_1_1_packet_template_afa91823a3af8f457e0c021f70db98bad}} 
 \index{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_prevPacketDeltaTime@{\_prevPacketDeltaTime}}
@@ -131,7 +131,7 @@ Holds the delta time between voltage/current packets.
 
 
 
-Definition at line 82 of file Packet\+Template.\+hpp.
+Definition at line 71 of file Packet\+Template.\+hpp.
 
 \mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_template_a82ce1199b529572d1cbd372a5c807efd}\label{classcdp_1_1packet_1_1_packet_template_a82ce1199b529572d1cbd372a5c807efd}} 
 \index{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_tuple@{\_tuple}}
@@ -146,7 +146,7 @@ The tuple which stores the pointers to the fields in the packet buffer.
 
 
 
-Definition at line 79 of file Packet\+Template.\+hpp.
+Definition at line 68 of file Packet\+Template.\+hpp.
 
 \mbox{\Hypertarget{classcdp_1_1packet_1_1_packet_template_a5b9f2b870079d3054aa5e27185a9d9b5}\label{classcdp_1_1packet_1_1_packet_template_a5b9f2b870079d3054aa5e27185a9d9b5}} 
 \index{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$@{cdp::packet::PacketTemplate$<$ NewPacket, ID, \_First, \_Rest $>$}!\_tupleLength@{\_tupleLength}}
@@ -161,10 +161,10 @@ Automatically calculates the packet length by sum of the tuple element sizes.
 
 
 
-Definition at line 73 of file Packet\+Template.\+hpp.
+Definition at line 62 of file Packet\+Template.\+hpp.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/rr/\+Desktop/\+C\+D\+P/include/\+Packet/\mbox{\hyperlink{_packet_template_8hpp}{Packet\+Template.\+hpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/rr/\+Desktop/\+C\+D\+P -\/ Copy/include/\+Packet/\mbox{\hyperlink{_packet_template_8hpp}{Packet\+Template.\+hpp}}\end{DoxyCompactItemize}

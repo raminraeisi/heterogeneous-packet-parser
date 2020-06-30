@@ -158,9 +158,10 @@
     <ClInclude Include="..\include\Packet\PacketBase.hpp" />
     <ClInclude Include="..\include\Packet\PacketFactory.hpp" />
     <ClInclude Include="..\include\Packet\PacketTemplate.hpp" />
+    <ClInclude Include="..\include\Packet\StreamPacketParser.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\docs\ClassDiagram.cd" />
+    <None Include="..\docs\class-diagram\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
