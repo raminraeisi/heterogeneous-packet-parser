@@ -164,7 +164,7 @@ TEST(InputStreams, IrrelevantBinFileWithOneError) {
 TEST(InputStreams, RippleStream) {
     std::string str("");
 
-    srand(time(NULL));
+    srand(static_cast<unsigned int>(time(NULL)));
     std::vector<char> buffer{};
     for (size_t i = 0; i < 50; ++i) {
         auto& vec = createValidVoltageCurrentPacket(i * 1000, 5, (uint64_t)20 + (rand() % 20) );
