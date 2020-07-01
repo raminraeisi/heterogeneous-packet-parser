@@ -20,15 +20,15 @@ namespace cdp {
 
 			/// Will be called to parse the stream
 			void parse() {
-				_istream.seekg(0, std::ios::beg);
 
 				uint8_t packetType;
 				auto& packetFactory = cdp::factory::PacketFactory::getInstance();
 
+				_istream >> packetType;
+
 				/// Iterating over the file and parse packets
 				try {
 					while (!_istream.eof()) {
-						_istream >> packetType;
 						/// Retrieves the corresponding packet instance from the registry
 						auto packet = packetFactory.GetObject(packetType);
 
@@ -41,6 +41,7 @@ namespace cdp {
 							_istream.read(&buffer[1], packet->length() - 1);
 							packet->updateFromMemory(reinterpret_cast<uint8_t*>(&buffer[0]));
 						}
+						_istream >> packetType;
 					}
 				}
 				catch (std::istream::failure e) {
@@ -50,6 +51,7 @@ namespace cdp {
 		private:
 			/// Will be holding a reference to the desired stream object to be used as input of parsing
 			std::istream& _istream;
+			/// Will be holding a reference to the desired output stream object to be used for creating the outputs
 			std::ostream& _ostream;
 		};
 
